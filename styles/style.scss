@@ -5,6 +5,7 @@
 @use "./aboutMe.scss";
 @use "./header.scss";
 @use "./new.scss";
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
 
 @font-face {
@@ -43,11 +44,10 @@ a {
 body {
   background-color: #65901f;
   width: 100vw;
-  // font-family: "Noto Sans KR", sans-serif;
   font-family: "Work Sans", sans-serif;
+  overflow-x: hidden;
 
-  // overflow-x: hidden;
-  // width: 100vw;
+  // font-family: "Noto Sans KR", sans-serif;
   // background: #f6f6f6;
   // color: #6a6969;
   // font-family: arial, helvetica;
@@ -56,11 +56,31 @@ body {
 main {
   width: 100%;
 }
-
-#fullpage {
-  width: 100%;
-  height: 100%;
+//
+.gnb-item {
+  display: none;
 }
+
+article {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: coral;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gnb-item.show {
+  display: block;
+}
+
+// #main-page {
+//   display: none;
+// }
+
+// #main-page.show {
+//   display: block;
+// }
 
 // ================ 공통클래스 =========================
 .tab_title {
