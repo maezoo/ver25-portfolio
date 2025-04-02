@@ -1,19 +1,23 @@
 .coding {
-  font-family: "Wanted Sans Variable";
+  // font-family: "Wanted Sans Variable";
+  width: 100vw;
+  height: 100vh;
 
-  .slide {
-    .slide-content {
-      width: 100%;
-      height: 100%;
+  .myProjectSwiper {
+    width: 100%;
+    height: 100%;
+
+    .swiper-slide {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 80px;
+      gap: 50px;
     }
 
     .mo-content {
       display: flex;
+      justify-content: center;
       gap: 20px;
 
       .screen-wrapper {
@@ -271,6 +275,43 @@
         }
       }
     }
+
+    .slide-btn-next,
+    .slide-btn-prev {
+      width: 34px;
+      height: 77px;
+      background-color: white;
+      // height: 45px;
+      // position: absolute;
+      // top: 230px;
+      // right: 15px;
+    }
+
+    .slide-btn-prev {
+      border-width: 38.5px 0 38.5px 34px;
+      border-color: transparent transparent transparent #fff;
+      // position: absolute;
+      top: 50%;
+      // left: 10px;
+      border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+      // transition: all 0.3sease;
+      // background: url(/images/arrow-left.svg) no-repeat;
+    }
+
+    .slide-btn-next {
+      // background: url(/images/arrow-right.svg) no-repeat;
+    }
+
+    .slide-btn-next:after,
+    .slide-btn-prev:after {
+      // display: none;
+    }
+  }
+
+  .slide-pagination {
+    // font-size: 1.4rem;
+    // position: absolute;
+    // bottom: 0px;
   }
 }
 
