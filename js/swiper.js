@@ -1,6 +1,13 @@
 // // =======================================================
 
 var myProjectSwiper = new Swiper(".myProjectSwiper", {
+  mousewheel: true,
+  loop: true,
+  // keyboard: true,
+  keyboard: {
+    enabled: true, // 키보드 이벤트 활성화
+    onlyInViewport: true, // 화면 안에 있을 때만 작동
+  },
   pagination: {
     el: ".slide-pagination",
     type: "progressbar",
