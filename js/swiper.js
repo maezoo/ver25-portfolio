@@ -16,6 +16,11 @@ var myProjectSwiper = new Swiper(".myProjectSwiper", {
     nextEl: ".slide-btn-next",
     prevEl: ".slide-btn-prev",
   },
+  breakpoints: {
+    640: {
+      slidesPerView: 1
+    }
+  },
 });
 
 // // clone_5 스와이퍼 ========================================
