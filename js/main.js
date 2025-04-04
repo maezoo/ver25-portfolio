@@ -1,18 +1,23 @@
+// =========================================
+//  메뉴 오버레이 
+// =========================================
 const hamburger = document.querySelector('.hamburger');
 const overlayNav = document.querySelector('.overlay-navigation');
 const topBar = document.querySelector('.bar-top');
 const middleBar = document.querySelector('.bar-middle');
 const bottomBar = document.querySelector('.bar-bottom');
-const hamSpan = document.querySelector('.hamburger span');
 const gnbList = document.querySelectorAll('.gnb-list');
 const gnbLinks = document.querySelectorAll('.gnb-list a');
 
-
-hamburger.addEventListener('click', () => {
+hamburger.addEventListener('click', function () {
   hamburger.style.pointerEvents = 'none';
-  overlayNav.classList.toggle('overlay-active');
 
-  if (overlayNav.classList.contains('overlay-active')) {
+  const isActive = overlayNav.classList.contains('overlay-active');
+
+  if (!isActive) {
+    overlayNav.classList.remove('overlay-slide-up');
+    overlayNav.classList.add('overlay-active', 'show', 'overlay-slide-down');
+
     topBar.classList.remove('animate-out-top-bar');
     topBar.classList.add('animate-top-bar');
 
@@ -22,23 +27,23 @@ hamburger.addEventListener('click', () => {
     bottomBar.classList.remove('animate-out-bottom-bar');
     bottomBar.classList.add('animate-bottom-bar');
 
-    overlayNav.classList.remove('overlay-slide-up');
-    overlayNav.classList.add('overlay-slide-down');
-    overlayNav.style.display = 'block';
-    overlayNav.style.opacity = 1;
-
-    gnbList.forEach((item, i) => {
-      const delay = 0.2 + i * 0.15;
-      item.style.display = 'flex';
-      item.style.opacity = 0;
-      item.style.animation = `fadeInLeft 0.5s ease forwards ${delay}s`;
+    gnbList.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('active');
+      }, index * 150);
     });
 
-    gnbLinks.forEach(link => {
-      link.style.opacity = 1;
-    });
+    setTimeout(() => {
+      gnbLinks.forEach(link => {
+        link.classList.add('on');
+      });
+      hamburger.style.pointerEvents = 'auto';
+    }, gnbList.length * 150 + 100);
 
   } else {
+    overlayNav.classList.remove('overlay-active', 'show', 'overlay-slide-down');
+    overlayNav.classList.add('overlay-slide-up');
+
     topBar.classList.remove('animate-top-bar');
     topBar.classList.add('animate-out-top-bar');
 
@@ -48,140 +53,172 @@ hamburger.addEventListener('click', () => {
     bottomBar.classList.remove('animate-bottom-bar');
     bottomBar.classList.add('animate-out-bottom-bar');
 
-    overlayNav.classList.remove('overlay-slide-down');
-    overlayNav.classList.add('overlay-slide-up');
-
-    gnbList.forEach((item, i) => {
-      const delay = 0.1 * i;
-      item.style.animation = `fadeOutRight 0.4s ease forwards ${delay}s`;
-
+    gnbList.forEach((item, index) => {
       setTimeout(() => {
-        item.style.display = 'none';
-      }, 400 + delay * 1000); // 애니메이션 끝나고 display none
-    });
-
-    gnbLinks.forEach(link => {
-      link.style.opacity = 0;
+        item.classList.remove('active');
+      }, index * 150);
     });
 
     setTimeout(() => {
-      overlayNav.style.opacity = 0;
-      overlayNav.style.display = 'none';
-    }, 800);
+      gnbLinks.forEach(link => {
+        link.classList.remove('on');
+      });
+      hamburger.style.pointerEvents = 'auto';
+    }, gnbList.length * 150 + 100);
   }
-
-  setTimeout(() => {
-    hamburger.style.pointerEvents = 'auto';
-  }, 800);
 });
 
 
 
+// =========================================
+//  인트로 반짝임 효과 
+// =========================================
+(function () {
+  'use strict';
+  window.addEventListener('load', function () {
+    var canvas = document.getElementById('canvas');
+
+    if (!canvas || !canvas.getContext) {
+      return false;
+    }
+
+    /********************
+      Random Number
+    ********************/
+
+    function rand(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    /********************
+      Var
+    ********************/
+
+    var ctx = canvas.getContext('2d');
+    var X = canvas.width = window.innerWidth;
+    var Y = canvas.height = window.innerHeight;
+    var mouseX = null;
+    var mouseY = null;
+    var shapeNum = 300;
+    var shapes = [];
+    var style = {
+      black: 'black',
+      white: 'white',
+      lineWidth: 4,
+    };
+
+    /********************
+      Animation
+    ********************/
+
+    window.requestAnimationFrame =
+      window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      function (cb) {
+        setTimeout(cb, 17);
+      };
+
+    /********************
+      Shape
+    ********************/
+
+    function Shape(ctx, x, y) {
+      this.ctx = ctx;
+      this.init(x, y);
+    }
+
+    Shape.prototype.init = function (x, y) {
+      this.x = x;
+      this.y = y;
+      this.r = rand(10, 25);
+      this.ga = Math.random() * Math.random() * Math.random() * Math.random();
+      this.v = {
+        x: Math.random(),
+        y: -1
+      };
+      this.l = rand(0, 20);
+      this.sl = this.l;
+    };
+
+    Shape.prototype.updateParams = function () {
+      var ratio = this.l / this.sl;
+      //this.r *= ratio;
+      this.l -= 0.5;
+      if (this.l < 0) {
+        this.init(X * (Math.random() + Math.random()) / 2, rand(0, Y));
+      }
+    };
+
+    Shape.prototype.updatePosition = function () {
+      this.x += Math.random();
+      this.y += -Math.random();
+    };
+
+    Shape.prototype.draw = function () {
+      var ctx = this.ctx;
+      ctx.save();
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.globalAlpha = this.ga;
+      //ctx.fillStyle = 'rgb(123, 252, 100)';
+      ctx.fillStyle = 'white';
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, false);
+      ctx.fill();
+      ctx.restore();
+    };
+
+    Shape.prototype.render = function (i) {
+      this.updatePosition();
+      this.updateParams();
+      this.draw();
+    };
+
+    for (var i = 0; i < shapeNum; i++) {
+      var s = new Shape(ctx, X * (Math.random() + Math.random()) / 2, rand(0, Y));
+      shapes.push(s);
+    }
+
+    /********************
+      Render
+    ********************/
+
+    function render() {
+      ctx.clearRect(0, 0, X, Y);
+      for (var i = 0; i < shapes.length; i++) {
+        shapes[i].render(i);
+      }
+      requestAnimationFrame(render);
+    }
+
+    render();
+
+    /********************
+      Event
+    ********************/
+
+    function onResize() {
+      X = canvas.width = window.innerWidth;
+      Y = canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', function () {
+      onResize();
+    });
+
+    window.addEventListener('mousemove', function (e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    }, false);
+
+  });
+})();
 
 
 
 
 
 
-// =============================
 
 
-// hamburger.addEventListener('click', () => {
-//   hamburger.style.pointerEvents = 'none';
-
-//   const isOpen = overNav.classList.contains('overlay-active');
-
-//   if (!isOpen) {
-//     overNav.classList.add('overlay-active');
-//     topBar.classList.remove('animate-out-top-bar');
-//     topBar.classList.add('animate-top-bar');
-//     middleBar.classList.remove('animate-out-middle-bar');
-//     middleBar.classList.add('animate-middle-bar');
-//     bottomBar.classList.remove('animate-out-bottom-bar');
-//     bottomBar.classList.add('animate-bottom-bar');
-//     overNav.classList.remove('overlay-slide-up');
-//     overNav.classList.add('overlay-slide-down');
-
-//     Velocity(overNav, "transition.slideLeftIn", {
-//       duration: 300,
-//       delay: 0,
-//       begin: function () {
-//         Velocity(gnbList, "transition.perspectiveLeftIn", {
-//           stagger: 150,
-//           delay: 0,
-//           complete: function () {
-//             Velocity(gnbLinks, { opacity: [1, 0] }, { duration: 140 });
-//             hamburger.style.pointerEvents = 'auto';
-//           }
-//         });
-//       }
-//     });
-
-
-
-//     overNav.classList.toggle('open'); // 예시 클래스
-//     topBar.classList.toggle('animate-top');
-//     middleBar.classList.toggle('animate-middle');
-//     bottomBar.classList.toggle('animate-bottom');
-//     setTimeout(() => {
-//       hamburger.style.pointerEvents = 'auto';
-//     }, 800);
-//   });
-
-
-
-
-// overNav.toggleClass('overlay-active');
-// if (overNav.hasClass('overlay-active')) {
-
-//   top_bar.removeClass('animate-out-top-bar').addClass('animate-top-bar');
-//   middle_bar.removeClass('animate-out-middle-bar').addClass('animate-middle-bar');
-//   bottom_bar.removeClass('animate-out-bottom-bar').addClass('animate-bottom-bar');
-//   overNav.removeClass('overlay-slide-up').addClass('overlay-slide-down')
-//   overNav.velocity('transition.slideLeftIn', {
-//     duration: 300,
-//     delay: 0,
-//     begin: function () {
-//       $('.gnb-list').velocity('transition.perspectiveLeftIn', {
-//         stagger: 150,
-//         delay: 0,
-//         complete: function () {
-//           $('.gnb-list a').velocity({
-//             opacity: [1, 0],
-//           }, {
-//             delay: 10,
-//             duration: 140
-//           });
-//           $('.hamburger').css('pointer-events', 'auto');
-//         }
-//       })
-//     }
-//   })
-
-// } else {
-//   $('.hamburger').css('pointer-events', 'none');
-//   top_bar.removeClass('animate-top-bar').addClass('animate-out-top-bar');
-//   middle_bar.removeClass('animate-middle-bar').addClass('animate-out-middle-bar');
-//   bottom_bar.removeClass('animate-bottom-bar').addClass('animate-out-bottom-bar');
-//   overNav.removeClass('overlay-slide-down').addClass('overlay-slide-up')
-//   $('.gnb-list').velocity('transition.perspectiveRightOut', {
-//     stagger: 150,
-//     delay: 0,
-//     complete: function () {
-//       overNav.velocity('transition.fadeOut', {
-//         delay: 0,
-//         duration: 300,
-//         complete: function () {
-//           $('.gnb-list a').velocity({
-//             opacity: [0, 1],
-//           }, {
-//             delay: 0,
-//             duration: 50
-//           });
-//           $('.hamburger').css('pointer-events', 'auto');
-//         }
-//       });
-//     }
-//   })
-// }
-// })
