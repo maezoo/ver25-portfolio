@@ -8,113 +8,39 @@
   <link rel="icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css">
-  <!-- jQuery 라이브러리 추가 -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- Velocity.js 라이브러리 추가 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.2/velocity.ui.min.js"></script>
-  <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="/styles/style.scss">
-  <!-- 스크립트 로드 -->
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" type="module"></script>
   <script src="/js/tapItem.js" type="module"></script>
   <script src="/js/swiper.js" type="module"></script>
 </head>
-<!-- <div class="overlay-navigation">
-  <nav role="navigation">
-    <ul>
-      <li><a href="#" data-content="The beginning">Home</a></li>
-      <li><a href="#" data-content="Curious?">About</a></li>
-      <li><a href="#" data-content="I got game">Skills</a></li>
-      <li><a href="#" data-content="Only the finest">Works</a></li>
-      <li><a href="#" data-content="Don't hesitate">Contact</a></li>
-    </ul>
-  </nav>
-</div> -->
 
 <body>
+  <header>
+    <div class="header-inner sweetHome">
+      <div class="logo" data-target="#intro-page">
+        <h1>Portfolio by Yeonhee Jin</h1>
+      </div>
+      <div class="hamburger">
+        <span class="bar-top"></span>
+        <span class="bar-middle"></span>
+        <span class="bar-bottom"></span>
+      </div>
+    </div>
+  </header>
 
-
-
-  <!-- <div class="menu">
+  <main>
     <div class="overlay-navigation">
       <nav role="navigation">
         <ul>
-          <li><a href="#" data-content="The beginning">Home</a></li>
-          <li><a href="#" data-content="Curious?">About</a></li>
-          <li><a href="#" data-content="I got game">Skills</a></li>
-          <li><a href="#" data-content="Only the finest">Works</a></li>
-          <li><a href="#" data-content="Don't hesitate">Contact</a></li>
-
-
           <li class="gnb-list" data-target="#intro-page"><a href="#" data-content="The beginning">Home</a></li>
           <li class="gnb-list" data-target="#coding-page"><a href="#" data-content="Curious?">Coding</a></li>
           <li class="gnb-list" data-target="#design-page"><a href="#" data-content="I got game">Design</a></li>
           <li class="gnb-list" data-target="#aboutMe-page"><a href="#" data-content="Only the finest">About Me</a></li>
+          <li class="gnb-list" data-target="#contact-page"><a href="#" data-content="Don't hesitate">Contact</a></li>
         </ul>
       </nav>
     </div>
-
-    <section class="home">
-      <a href="https://codepen.io/fluxus/pen/gPWxXJ" target="_blank">Click for CSS version</a>
-      <div class="open-overlay">
-        <span class="bar-top"></span>
-        <span class="bar-middle"></span>
-        <span class="bar-bottom"></span>
-      </div>
-    </section>
-  </div>
- -->
-
-  <header>
-    <div class="header-inner">
-      <div class="logo" data-target="#intro-page">
-        <h1>Portfolio by Yeonhee Jin</h1>
-      </div>
-      <!-- <div class="hamburger">
-        <span class="bar-top"></span>
-        <span class="bar-middle"></span>
-        <span class="bar-bottom"></span>
-    </div>-->
-      <ul>
-        <li class="gnb-list" data-target="#intro-page"><a href="#" data-content="The beginning">Home</a></li>
-        <li class="gnb-list" data-target="#coding-page"><a href="#" data-content="Curious?">Coding</a></li>
-        <li class="gnb-list" data-target="#design-page"><a href="#" data-content="I got game">Design</a></li>
-        <li class="gnb-list" data-target="#aboutMe-page"><a href="#" data-content="Only the finest">About Me</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- <div class="header-inner">
-      <div class="logo">
-        <h1>Portfolio</h1>
-        <p>by Yeonhee Jin</p>
-      </div>
-      <ul class="gnb">
-        <li class="gnb-list" data-menuanchor="coding"><a href="#coding">CODING</a></li>
-        <li class="gnb-list" data-menuanchor="design"><a href="#design">DESIGN</a></li>
-        <li class="gnb-list" data-menuanchor="aboutMe"><a href="#aboutMe">ABOUT ME</a></li>
-      </ul>
-    </div> -->
-
-  <!-- <div class="overlay-navigation">
-            <nav role="navigation">
-              <ul>
-                <li class="gnb-list"><a href="#" data-content="The beginning">Home</a></li>
-                <li class="gnb-list"><a href="#home" data-content="Curious?">About</a></li>
-                <li class="gnb-list"><a href="#coding" data-content="I got game">Skills</a></li>
-                <li class="gnb-list"><a href="#design" data-content="Only the finest">Design</a></li>
-                <li class="gnb-list"><a href="#aboutMe" data-content="Don't hesitate">Contact</a></li>
-              </ul>
-            </nav>
-          </div> -->
-
-  <main>
-
-
-
 
     <div class="gnb-item intro" id="intro-page">
       <article class="intro-content">
@@ -135,13 +61,7 @@
       </article>
     </div>
 
-
-
-
-
-
     <div class="gnb-item coding bg-gradient" id="coding-page">
-
       <div class="swiper myProjectSwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -537,12 +457,6 @@
       </div>
     </div>
 
-
-
-
-
-
-
     <div class="gnb-item design bg-gradient" id="design-page">
       <article class="design-content">
         <h1 class="tab_title">DESIGN</h1>
@@ -583,11 +497,11 @@
         </div>
       </div>
     </div>
+
     <div class="gnb-item aboutMe bg-gradient" id="aboutMe-page">
       <article class=" aboutMe-content">
         <h1 class="tab_title">ABOUT ME</h1>
         <div class="meBox_wrapper">
-
 
           <div class="photo_img">
             <img src="/images/YeonheeJin.jpg" alt="">
