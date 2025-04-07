@@ -1,4 +1,28 @@
 // =========================================
+// 디자인 팝업 열기+닫기
+// =========================================
+
+const designIphone = document.querySelectorAll('.design_box');
+const designPopUp = document.querySelectorAll('.design-pop-up');
+
+designIphone.forEach(item => {
+  item.addEventListener('click', () => {
+    const targetImg = item.getAttribute('data-target');
+    const targetPopUp = document.querySelector(`#${targetImg}`);
+
+    if (targetPopUp) {
+      targetPopUp.classList.add('show');
+    }
+  });
+});
+
+designPopUp.forEach(showPop => {
+  showPop.addEventListener('click', (event) => {
+    showPop.classList.remove('show');
+  });
+});
+
+// =========================================
 //  메뉴 오버레이 + 메뉴전환
 // =========================================
 const hamburger = document.querySelector('.hamburger');
