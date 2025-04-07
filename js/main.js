@@ -1,5 +1,5 @@
 // =========================================
-//  메뉴 오버레이 
+//  메뉴 오버레이 + 메뉴전환
 // =========================================
 const hamburger = document.querySelector('.hamburger');
 const overlayNav = document.querySelector('.overlay-navigation');
@@ -8,6 +8,9 @@ const middleBar = document.querySelector('.bar-middle');
 const bottomBar = document.querySelector('.bar-bottom');
 const gnbList = document.querySelectorAll('.gnb-list');
 const gnbLinks = document.querySelectorAll('.gnb-list a');
+const articles = document.querySelectorAll('.gnb-item');
+const activeTab = sessionStorage.getItem('activeTab');
+const Logo = document.querySelector('.logo');
 
 hamburger.addEventListener('click', function () {
   hamburger.style.pointerEvents = 'none';
@@ -26,6 +29,7 @@ hamburger.addEventListener('click', function () {
 
     bottomBar.classList.remove('animate-out-bottom-bar');
     bottomBar.classList.add('animate-bottom-bar');
+
 
     gnbList.forEach((item, index) => {
       setTimeout(() => {
@@ -53,6 +57,7 @@ hamburger.addEventListener('click', function () {
     bottomBar.classList.remove('animate-bottom-bar');
     bottomBar.classList.add('animate-out-bottom-bar');
 
+
     gnbList.forEach((item, index) => {
       setTimeout(() => {
         item.classList.remove('active');
@@ -67,6 +72,122 @@ hamburger.addEventListener('click', function () {
     }, gnbList.length * 150 + 100);
   }
 });
+
+// 탭메뉴 전환 ===========================
+const setActiveTab = (tabId) => {
+  const targetActive = document.querySelector(`#${tabId}`);
+  if (targetActive) {
+    articles.forEach(tabContent => {
+      tabContent.classList.remove('show');
+    });
+    targetActive.classList.add('show');
+  }
+};
+
+if (activeTab) {
+  setActiveTab(activeTab);
+} else {
+  setActiveTab('intro-page');
+}
+
+gnbList.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const targetSelector = tab.getAttribute('data-target').substring(1);
+    setActiveTab(targetSelector);
+    sessionStorage.setItem('activeTab', targetSelector);
+  });
+});
+
+
+Logo.addEventListener('click', () => {
+  articles.forEach(section => section.classList.remove('show'));
+  setActiveTab('intro-page');
+  sessionStorage.removeItem('activeTab');
+});
+// ====================================
+
+
+
+
+
+
+
+
+
+
+
+
+// // =========================================
+// //  메뉴 오버레이 원본
+// // =========================================
+// const hamburger = document.querySelector('.hamburger');
+// const overlayNav = document.querySelector('.overlay-navigation');
+// const topBar = document.querySelector('.bar-top');
+// const middleBar = document.querySelector('.bar-middle');
+// const bottomBar = document.querySelector('.bar-bottom');
+// const gnbList = document.querySelectorAll('.gnb-list');
+// const gnbLinks = document.querySelectorAll('.gnb-list a');
+
+// hamburger.addEventListener('click', function () {
+//   hamburger.style.pointerEvents = 'none';
+
+//   const isActive = overlayNav.classList.contains('overlay-active');
+
+//   if (!isActive) {
+//     overlayNav.classList.remove('overlay-slide-up');
+//     overlayNav.classList.add('overlay-active', 'show', 'overlay-slide-down');
+
+//     topBar.classList.remove('animate-out-top-bar');
+//     topBar.classList.add('animate-top-bar');
+
+//     middleBar.classList.remove('animate-out-middle-bar');
+//     middleBar.classList.add('animate-middle-bar');
+
+//     bottomBar.classList.remove('animate-out-bottom-bar');
+//     bottomBar.classList.add('animate-bottom-bar');
+
+
+//     gnbList.forEach((item, index) => {
+//       setTimeout(() => {
+//         item.classList.add('active');
+//       }, index * 150);
+//     });
+
+//     setTimeout(() => {
+//       gnbLinks.forEach(link => {
+//         link.classList.add('on');
+//       });
+//       hamburger.style.pointerEvents = 'auto';
+//     }, gnbList.length * 150 + 100);
+
+//   } else {
+//     overlayNav.classList.remove('overlay-active', 'show', 'overlay-slide-down');
+//     overlayNav.classList.add('overlay-slide-up');
+
+//     topBar.classList.remove('animate-top-bar');
+//     topBar.classList.add('animate-out-top-bar');
+
+//     middleBar.classList.remove('animate-middle-bar');
+//     middleBar.classList.add('animate-out-middle-bar');
+
+//     bottomBar.classList.remove('animate-bottom-bar');
+//     bottomBar.classList.add('animate-out-bottom-bar');
+
+
+//     gnbList.forEach((item, index) => {
+//       setTimeout(() => {
+//         item.classList.remove('active');
+//       }, index * 150);
+//     });
+
+//     setTimeout(() => {
+//       gnbLinks.forEach(link => {
+//         link.classList.remove('on');
+//       });
+//       hamburger.style.pointerEvents = 'auto';
+//     }, gnbList.length * 150 + 100);
+//   }
+// });
 
 
 

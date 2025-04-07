@@ -1,54 +1,28 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const tabItems = document.querySelectorAll('.gnb-list');
-  const articles = document.querySelectorAll('.gnb-item');
-  const activeTab = sessionStorage.getItem('activeTab');
+// document.addEventListener('DOMContentLoaded', () => {
 
 
-  // const setActiveTab = (tabId) => {
-  //   const targetActive = document.querySelector(`#${tabId}`);
-  //   if (!targetActive) return;
+// const setActiveTab = (tabId) => {
+//   const targetActive = document.querySelector(`#${tabId}`);
+//   if (!targetActive) return;
 
-  //   articles.forEach(tabContent => {
-  //     tabContent.style.opacity = "0";
-  //     setTimeout(() => {
-  //       tabContent.style.display = "none";
-  //       tabContent.classList.remove("show");
-  //     }, 200); // 0.5초 후 사라짐
-  //   });
+//   articles.forEach(tabContent => {
+//     tabContent.style.opacity = "0";
+//     setTimeout(() => {
+//       tabContent.style.display = "none";
+//       tabContent.classList.remove("show");
+//     }, 200); // 0.5초 후 사라짐
+//   });
 
-  //   setTimeout(() => {
-  //     targetActive.style.display = "block";
-  //     setTimeout(() => {
-  //       targetActive.style.opacity = "1";
-  //       targetActive.classList.add("show");
-  //     }, 10); // 약간의 딜레이 후 나타남
-  //   }, 200);
-  // };
+//   setTimeout(() => {
+//     targetActive.style.display = "block";
+//     setTimeout(() => {
+//       targetActive.style.opacity = "1";
+//       targetActive.classList.add("show");
+//     }, 10); // 약간의 딜레이 후 나타남
+//   }, 200);
+// };
 
-  const setActiveTab = (tabId) => {
-    const targetActive = document.querySelector(`#${tabId}`);
-    if (targetActive) {
-      articles.forEach(tabContent => {
-        tabContent.classList.remove('show');
-      });
-      targetActive.classList.add('show');
-    }
-  };
-
-  if (activeTab) {
-    setActiveTab(activeTab);
-  } else {
-    setActiveTab('intro-page');
-  }
-
-  tabItems.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const targetSelector = tab.getAttribute('data-target').substring(1);
-      setActiveTab(targetSelector);
-      sessionStorage.setItem('activeTab', targetSelector);
-    });
-  });
-});
+// });
 
 
 
