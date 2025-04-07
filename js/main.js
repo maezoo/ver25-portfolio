@@ -62,6 +62,7 @@ hamburger.addEventListener('click', function () {
     gnbList.forEach((item, index) => {
       setTimeout(() => {
         item.classList.add('active');
+        // }, index * 150);
       }, index * 150);
     });
 

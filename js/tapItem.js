@@ -26,13 +26,7 @@
 
 
 
-// logoBtn.forEach(logo => {
-//   logo.addEventListener('click', () => {
-//     articles.forEach(section => section.classList.remove('show'));
-//     mainHome.classList.add('show');
-//     sessionStorage.removeItem('activeTab');
-//   });
-// });
+
 
 
 
