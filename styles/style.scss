@@ -1,5 +1,4 @@
 @use "./reset.scss";
-@use "./fullpage.css";
 @use "./coding.scss";
 @use "./design.scss";
 @use "./aboutMe.scss";
@@ -12,16 +11,14 @@
 
 @font-face {
   font-family: "Cafe24Decoshadow";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Decoshadow.woff2")
-    format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-3@1.1/Cafe24Decoshadow.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "InkLipquid";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff")
-    format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -93,6 +90,7 @@ main {
 .tab_title {
   font-size: 35px;
 }
+
 // =========================================
 .hover_effect {
   font-family: "InkLipquid";
