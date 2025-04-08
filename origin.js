@@ -135,7 +135,7 @@ var swiper = new Swiper(".mySwiper", {
 
 // // =======================================================
 
-var swiper2 = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper(".desSwiper", {
   // autoplay: {
   //   delay: 300,
   // },

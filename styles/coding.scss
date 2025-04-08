@@ -1,3 +1,16 @@
+// .fade-in-up {
+//   transition: all 0.6s ease-out;
+//   opacity: 0;
+//   transform: translateY(20px);
+// }
+
+// .fade-in-up.animate {
+//   opacity: 1;
+//   transform: translateY(0px);
+// }
+
+
+
 .coding {
   width: 100vw;
   height: 100vh;
@@ -209,7 +222,7 @@
             color: #d86f5d;
             text-shadow: 1px 1px 0 #fff;
             font-style: italic;
-            animation: fadeInUp 0.8s ease-out both;
+            // animation: fadeInUp 0.8s ease-out both;
           }
         }
 
@@ -235,25 +248,9 @@
 
         th,
         td {
-          // overflow: hidden;
-          // border-radius: 10px;
-
-          // background-color: rgba(255, 241, 230, 0.5);
           background-color: rgba(245, 240, 230, 0.8);
-
-
-          // text-shadow: 0.5px 0.5px 1px rgba(255, 255, 255, 0.2);
-
-
           border: 1px solid rgba(255, 255, 255, 0.3);
-          // color: #ffdab9;
-          // color: #eee;
-
-
           vertical-align: middle;
-          // 원본
-          // border: 1px solid black;
-          // vertical-align: middle;
         }
 
         th {
@@ -262,8 +259,6 @@
           text-align: center;
           font-weight: bold;
           padding: 10px;
-
-          // color: #ffdab9;
         }
 
         td {
@@ -346,13 +341,11 @@
             transition: all 0.4s ease;
 
             h3 {
-              // margin: 5px 0px;
               font-size: 3rem;
               font-weight: 800;
               color: #d86f5d;
               text-shadow: 1px 1px 0 #fff;
               font-style: italic;
-              // animation: fadeInUp 0.8s ease-out both;
             }
           }
 

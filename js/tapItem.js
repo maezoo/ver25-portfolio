@@ -1,22 +1,3 @@
-// 키보드 이벤트 ======================================
-const arrowNext = document.querySelector(".slide-btn-next");
-const arrowPrev = document.querySelector(".slide-btn-prev");
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowRight") {
-    arrowNext.classList.add("hover");
-    setTimeout(() => {
-      arrowNext.classList.remove("hover");
-    }, 1000);
-  }
-
-  if (e.key === "ArrowLeft") {
-    arrowPrev.classList.add("hover");
-    setTimeout(() => {
-      arrowPrev.classList.remove("hover");
-    }, 1000);
-  }
-});
 
 // mobile 팝업 open /close ==========================
 // const hamburger = document.querySelector('.mo-hamburger');

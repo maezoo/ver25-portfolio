@@ -26,7 +26,7 @@ var myProjectSwiper = new Swiper(".myProjectSwiper", {
 
 // // =======================================================
 
-var swiper2 = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper(".desSwiper", {
   // autoplay: {
   //   delay: 300,
   // },

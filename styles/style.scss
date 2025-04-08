@@ -4,6 +4,7 @@
 @use "./aboutMe.scss";
 @use "./header.scss";
 @use "./intro.scss";
+@use "./des-swiper.scss";
 
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
 
@@ -94,10 +95,7 @@ main {
   padding: 0px 0px 8px 8px;
 }
 
-.click_effect {
-  font-family: "InkLipquid";
-  font-size: 2.2rem;
-}
+
 
 //hover the screen
 .animate__flash {
