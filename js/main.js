@@ -1,7 +1,6 @@
 // =========================================
 // 디자인 팝업 열기+닫기
 // =========================================
-
 const designIphone = document.querySelectorAll('.design_box');
 const designPopUp = document.querySelectorAll('.design-pop-up');
 

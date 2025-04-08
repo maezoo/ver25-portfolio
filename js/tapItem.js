@@ -1,36 +1,3 @@
-// document.addEventListener('DOMContentLoaded', () => {
-
-
-// const setActiveTab = (tabId) => {
-//   const targetActive = document.querySelector(`#${tabId}`);
-//   if (!targetActive) return;
-
-//   articles.forEach(tabContent => {
-//     tabContent.style.opacity = "0";
-//     setTimeout(() => {
-//       tabContent.style.display = "none";
-//       tabContent.classList.remove("show");
-//     }, 200); // 0.5초 후 사라짐
-//   });
-
-//   setTimeout(() => {
-//     targetActive.style.display = "block";
-//     setTimeout(() => {
-//       targetActive.style.opacity = "1";
-//       targetActive.classList.add("show");
-//     }, 10); // 약간의 딜레이 후 나타남
-//   }, 200);
-// };
-
-// });
-
-
-
-
-
-
-
-
 // 키보드 이벤트 ======================================
 const arrowNext = document.querySelector(".slide-btn-next");
 const arrowPrev = document.querySelector(".slide-btn-prev");

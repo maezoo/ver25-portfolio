@@ -11,83 +11,11 @@
 
     h1 {
       font-size: 3.5rem;
+      font-weight: 600;
     }
 
     p {
       font-size: 1.5rem;
-    }
-  }
-
-  .box-content {
-    width: 1058px;
-    display: flex;
-    justify-content: space-between;
-
-
-
-    .rds-box {
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      position: relative;
-      width: 300px;
-      height: 300px;
-      border: 2px solid rgb(255, 255, 255);
-      border-radius: 30px;
-      overflow: hidden;
-
-      .rdsImg {
-        width: 100%;
-        height: 100%;
-
-        .de-feature {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0%;
-          background: rgba(253, 253, 253, 0.7);
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          opacity: 0;
-          transform: translateY(-100%);
-          visibility: hidden;
-          transition: all 0.4s ease;
-
-          h3 {
-            // margin: 5px 0px;
-            font-size: 3rem;
-            font-weight: 800;
-            color: #d86f5d;
-            text-shadow: 1px 1px 0 #fff;
-            font-style: italic;
-            // animation: fadeInUp 0.8s ease-out both;
-          }
-        }
-
-        &:hover .de-feature {
-          opacity: 1;
-          transform: translateY(0%);
-          visibility: visible;
-        }
-      }
-
-      .rdsImg-1 {
-        background: url(/images/pra_e-class.JPG) no-repeat;
-        background-size: cover;
-        background-position: 90% 0%;
-      }
-
-      .rdsImg-2 {
-        background: url(/images/pra_beauty-store.JPG) no-repeat;
-        background-size: cover;
-      }
-
-      .rdsImg-3 {
-        background: url(/images/pra_shopping-app.png) no-repeat;
-        background-size: cover;
-        background-position: 50%;
-      }
     }
   }
 
@@ -120,11 +48,6 @@
       }
     }
   }
-
-
-
-
-
 
   .myProjectSwiper {
     width: 100%;
@@ -388,6 +311,77 @@
       }
     }
 
+    .box-content {
+      width: 1058px;
+      display: flex;
+      justify-content: space-between;
+
+      .rds-box {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 30px;
+        overflow: hidden;
+
+        .rdsImg {
+          width: 100%;
+          height: 100%;
+
+          .de-feature {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0%;
+            background: rgba(253, 253, 253, 0.7);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            opacity: 0;
+            transform: translateY(-100%);
+            visibility: hidden;
+            transition: all 0.4s ease;
+
+            h3 {
+              // margin: 5px 0px;
+              font-size: 3rem;
+              font-weight: 800;
+              color: #d86f5d;
+              text-shadow: 1px 1px 0 #fff;
+              font-style: italic;
+              // animation: fadeInUp 0.8s ease-out both;
+            }
+          }
+
+          &:hover .de-feature {
+            opacity: 1;
+            transform: translateY(0%);
+            visibility: visible;
+          }
+        }
+
+        .rdsImg-1 {
+          background: url(/images/pra_e-class.JPG) no-repeat;
+          background-size: cover;
+          background-position: 90% 0%;
+        }
+
+        .rdsImg-2 {
+          background: url(/images/pra_beauty-store.JPG) no-repeat;
+          background-size: cover;
+        }
+
+        .rdsImg-3 {
+          background: url(/images/pra_shopping-app.png) no-repeat;
+          background-size: cover;
+          background-position: 50%;
+        }
+      }
+    }
+
     .slide-btn-next,
     .slide-btn-prev {
       position: absolute;
@@ -426,110 +420,13 @@
       }
     }
 
-    .slide-btn-next:after,
-    .slide-btn-prev:after {
-      // display: none;
-    }
-
     .swiper-pagination-horizontal {
       background-color: rgba(255, 255, 255, 0.4);
+      height: 6px;
 
       span {
         background-color: white;
       }
     }
-  }
-}
-
-.clone_5 {
-  padding: 20px 0;
-
-  .section_inner-2 {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .mySwiper {
-    width: 800px;
-    height: 465px;
-    height: 500px;
-    position: relative;
-
-    .swiper-wrapper {
-      .swiper-slide {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-        justify-content: flex-start;
-
-        h2 {
-          font-size: 1.6rem;
-          margin-top: 15px;
-        }
-
-        .project-content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 18px;
-
-          button {
-            width: 115px;
-            height: 25px;
-          }
-        }
-      }
-
-      .img-wrap {
-        width: 600px;
-        height: 360px;
-        border-radius: 2.6rem;
-        overflow: hidden;
-        box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-
-      .sqa img {
-        transform: scale(1, 1.15);
-        object-fit: cover;
-      }
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      filter: invert(80%);
-      width: 45px;
-      height: 45px;
-      position: absolute;
-      top: 230px;
-    }
-
-    .swiper-button-prev {
-      background: url(/images/arrow-left.svg) no-repeat;
-    }
-
-    .swiper-button-next {
-      background: url(/images/arrow-right.svg) no-repeat;
-    }
-
-    .swiper-button-next:after,
-    .swiper-button-prev:after {
-      display: none;
-    }
-  }
-
-  .swiper-pagination {
-    font-size: 1.4rem;
-    position: absolute;
-    bottom: 0px;
   }
 }
