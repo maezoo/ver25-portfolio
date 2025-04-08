@@ -24,24 +24,24 @@ var myProjectSwiper = new Swiper(".myProjectSwiper", {
 });
 
 // // clone_5 스와이퍼 ========================================
-var swiper = new Swiper(".mySwiper", {
+// var swiper = new Swiper(".mySwiper", {
 
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 10000,
-  },
-  keyboard: true,
-  loop: true,
-  slidesPerView: 1,
-  slidesPerGroup: 1,
-});
+//   pagination: {
+//     el: ".swiper-pagination",
+//     type: "fraction",
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   autoplay: {
+//     delay: 10000,
+//   },
+//   keyboard: true,
+//   loop: true,
+//   slidesPerView: 1,
+//   slidesPerGroup: 1,
+// });
 
 // // =======================================================
 

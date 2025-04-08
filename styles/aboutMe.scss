@@ -106,6 +106,7 @@
 
     .license {
       grid-column: 2/3;
+
       p {
         margin-top: 15px;
       }
@@ -206,16 +207,20 @@
     transform: translateY(100%);
     opacity: 0;
   }
+
   50% {
     transform: translateY(-110px);
     opacity: 1;
   }
+
   75% {
     transform: translateY(-95px);
   }
+
   90% {
     transform: translateY(-103px);
   }
+
   100% {
     transform: translateY(-100px);
   }
