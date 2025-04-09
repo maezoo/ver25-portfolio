@@ -4,7 +4,7 @@
 @use "./aboutMe.scss";
 @use "./header.scss";
 @use "./intro.scss";
-@use "./des-swiper.scss";
+// @use "./des-swiper.scss";
 
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
 
@@ -81,11 +81,23 @@ main {
   transition: opacity 0.2s ease-in-out;
 }
 
-.bg-gradient {
+.bg-wood {
+  // background: url(../images/pink-wood.jpg);
+  // background-position: 80%;
+  background: url(../images/spark.jpg);
+  // background-position: 100% -2px;
+  // background-size: cover;
+  // background: url(../mages/back1.jpg) no-repeat;
+  // background: url(../images/tile.jpg) no-repeat;
+
+}
+
+.bg-forest {
   background: url(../images/forest.jpg) no-repeat;
   background-position: 100% -2px;
   background-size: cover;
 }
+
 
 
 // =========================================
