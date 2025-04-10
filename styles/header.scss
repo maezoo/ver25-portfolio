@@ -78,6 +78,20 @@ header {
   ul {
     display: flex;
 
+    .copyRight {
+      font-size: 1.4rem;
+      font-weight: 300;
+      position: absolute;
+      top: 45%;
+      // left: 50%;
+      // transform: translate(-50%, -10%);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
     .gnb-list {
       flex-basis: 20%;
       justify-content: center;
@@ -143,17 +157,12 @@ header {
       transform: translate(-50%, -50%);
       bottom: 49%;
       z-index: 100;
-
       opacity: 0;
       transition: all 0.3s linear;
       display: block;
-      // margin-right: auto;
-      // margin-left: auto;
-
-
     }
 
-    .gnb-list:hover:before {
+    .gnb-list:not(:first-child):hover::before {
       transform: translateX(0);
       opacity: 1;
     }
@@ -166,7 +175,7 @@ header {
 }
 
 .gnb-list:nth-of-type(1) {
-  background-color: #535353;
+  background-color: #4c4c4c;
   transition-delay: 0s;
 }
 
@@ -265,7 +274,7 @@ Animation keyframes
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    background-color: #535353;
+    background-color: #4c4c4c;
   }
 }
 
@@ -288,7 +297,7 @@ Animation keyframes
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    background-color: #535353;
+    background-color: #4c4c4c;
   }
 }
 
@@ -302,13 +311,13 @@ Animation keyframes
   }
 
   100% {
-    background-color: #535353;
+    background-color: #4c4c4c;
   }
 }
 
 @keyframes animate-out-top-bar {
   0% {
-    background-color: #535353;
+    background-color: #4c4c4c;
   }
 
   50% {
@@ -319,7 +328,7 @@ Animation keyframes
   80% {
     -webkit-transform: translateY(5px);
     transform: translateY(5px);
-    background-color: #535353;
+    background-color: #4c4c4c;
   }
 
   100% {
@@ -331,7 +340,7 @@ Animation keyframes
 
 @keyframes animate-out-bottom-bar {
   0% {
-    background-color: #535353;
+    background-color: #4c4c4c;
   }
 
   50% {
@@ -342,7 +351,7 @@ Animation keyframes
   80% {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
-    background-color: #535353;
+    background-color: #4c4c4c;
   }
 
   100% {
@@ -354,11 +363,11 @@ Animation keyframes
 
 @keyframes animate-out-middle-bar {
   0% {
-    background-color: #535353;
+    background-color: #4c4c4c;
   }
 
   80% {
-    background-color: #535353;
+    background-color: #4c4c4c;
   }
 
   100% {
