@@ -1,43 +1,28 @@
-// var swiper2 = new Swiper(".desSwiper", {
-//   // autoplay: {
-//   //   delay: 300,
-//   // },
-//   effect: "coverflow",
-//   grabCursor: true,
-//   centeredSlides: true,
-//   coverflowEffect: {
-//     rotate: 0,
-//     stretch: 0,
-//     depth: 100,
-//     modifier: 3,
-//     slideShadows: true
-//   },
-//   keyboard: {
-//     enabled: true
-//   },
-//   mousewheel: {
-//     thresholdDelta: 70
-//   },
-//   loop: true,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true
-//   },
-//   // breakpoints: {
-//   //   640: {
-//   //     slidesPerView: 2
-//   //   },
-//   //   768: {
-//   //     slidesPerView: 1
-//   //   },
-//   //   1024: {
-//   //     slidesPerView: 2
-//   //   },
-//   //   1560: {
-//   //     slidesPerView: 3
-//   //   }
-//   // }
-// });
+var thumbSwiper = new Swiper(".thumbSwiper", {
+  // keyboard: true,
+  // // autoplay: {
+  // //   delay: 1500,
+  // // },
+  // effect: "coverflow",
+  // grabCursor: true,
+  // centeredSlides: true,
+  // slidesPerView: "auto",
+  // coverflowEffect: {
+  //   rotate: 50,
+  //   stretch: 0,
+  //   depth: 100,
+  //   modifier: 1,
+  //   slideShadows: true,
+  // },
+  // pagination: {
+  // },
+  slidesPerView: 1,
+  // spaceBetween: 30,
+  pagination: {
+    el: ".thumb-pagination",
+    // clickable: true,
+  },
+});
 
 // =====================================================
 // =====================================================
