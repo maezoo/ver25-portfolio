@@ -1,3 +1,36 @@
+const tapList = document.querySelectorAll('.side-tab li');
+const tapItem = document.querySelectorAll('.tab-content');
+// 초기 설정: 첫 번째 탭과 콘텐츠 보이게
+if (tapList.length > 0 && tapItem.length > 0) {
+    tapList[0].classList.add('active');
+    tapItem[0].classList.add('show');
+}
+
+tapList.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // 모든 콘텐츠 숨기기
+        tapItem.forEach(item => item.classList.remove('show'));
+
+        // 모든 탭에서 active 제거
+        tapList.forEach(t => t.classList.remove('active'));
+
+        // 클릭된 탭에 active 추가
+        tab.classList.add('active');
+
+        // 연결된 콘텐츠 선택해서 보이기
+        const targetId = tab.getAttribute('data-target');
+        const targetContent = document.querySelector(targetId);
+        if (targetContent) {
+            targetContent.classList.add('show');
+        }
+    });
+});
+
+
+
+
+
+
 
 // mobile 팝업 open /close ==========================
 // const hamburger = document.querySelector('.mo-hamburger');

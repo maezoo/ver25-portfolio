@@ -497,8 +497,112 @@
           <h1>DESIGN</h1>
           <p>브랜드 아이덴티티를 고려해, 실제 제품을 바탕으로 웹 디자인을 기획하고 제작한 프로젝트입니다.</p>
         </div>
-        <div class="slider-wrapper">
-          <div class="swiper thumbSwiper">
+        <div class="tab-wrapper">
+          <ul class="side-tab">
+            <li class="design-tab" data-target="#detail-des">
+              <p>Detail Page</p>
+            </li>
+            <li class="design-tab" data-target="#reDe-des">
+              <p>Logo/Banner</p>
+            </li>
+            <li class="design-tab" data-target="#ban-des">
+              <p>Redesign</p>
+            </li>
+          </ul>
+          <div class="content-wrapper">
+            <div class="tab-content accordion" id="detail-des">
+              <div class="design_box thumb-1 thumb-effect" data-target="juice">
+                <div class="thumb-info">
+                  <p>상세페이지</p>
+                </div>
+              </div>
+              <div class="design_box thumb-2 thumb-effect" data-target="beready">
+                <div class="thumb-info">
+                  <p>상세페이지</p>
+                </div>
+              </div>
+              <div class="design_box thumb-3 thumb-effect" data-target="dessert">
+                <div class="thumb-info">
+                  <p>상세페이지</p>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content nonPos" id="reDe-des">
+              <div class="design_box thumb-8 thumb-effect" data-target="nonsan">
+                <div class="thumb-info">
+                  <p>관공서디자인</p>
+                </div>
+              </div>
+              <div class="design_box thumb-9 thumb-effect" data-target="postec">
+                <img src="images/design/postec-logo1.jpg" alt="">
+                <div class="thumb-info info-img">
+                  <p>홈페이지 리디자인</p>
+                  <div>
+                    <div class="postec-btn main-img" data-target="postec-main">
+                      <p>MAIN</p>
+                    </div>
+                    <div class="postec-btn sub-img" data-target="postec-sub">
+                      <p>SUB</p>
+                    </div>
+                    <div class="postec-btn mobile" data-target="postec-mobile">
+                      <p>MOBILE</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="tab-content concept" id="ban-des">
+              <div class="design_box thumb-6 thumb-effect" data-target="card">
+                <div class="thumb-info">
+                  <p>카드디자인</p>
+                </div>
+              </div>
+              <div class="design_box thumb-7 thumb-effect" data-target="logo">
+                <img src="images/design/heywha_logo.png" alt="">
+                <div class="thumb-info info-img">
+                  <p>로고디자인</p>
+                </div>
+              </div>
+              <div class="design_box thumb-4 thumb-effect" data-target="banner">
+                <div class="thumb-info">
+                  <p>배너디자인</p>
+                </div>
+              </div>
+              <div class="design_box thumb-5 thumb-effect" data-target="banner">
+                <div class="thumb-info">
+                  <p>배너디자인</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="design-pop-up" id="juice">
+        <div class="img_wrapper">
+          <img src="/images/design/detailPage_1.jpg" alt="" class="detail_img">
+        </div>
+      </div>
+      <div class="design-pop-up" id="beready">
+        <div class="img_wrapper">
+          <img src="/images/design/detailPage_2.jpg" alt="" class="detail_img">
+        </div>
+      </div>
+      <div class="design-pop-up" id="dessert">
+        <div class="img_wrapper">
+          <img src="/images/design/detailPage_3.jpg" alt="" class="detail_img">
+        </div>
+      </div>
+    </article>
+
+
+
+
+
+
+
+    <!-- 슬라이드 원본
+            <div class="swiper thumbSwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="design_box thumb-1 thumb-effect" data-target="juice">
@@ -543,7 +647,6 @@
               </div>
               <div class="swiper-slide">
                 <div class="design_box thumb-8 thumb-effect" data-target="nonsan">
-                  <!-- <img src="images/design/nonsan-logo.png" alt=""> -->
                   <div class="thumb-info info-img">
                     <p>관공서디자인</p>
                   </div>
@@ -583,32 +686,10 @@
 
             </div>
             <div class="thumb-pagination"></div>
-          </div>
-        </div>
+          </div> -->
 
-      </div>
+    <!--원본!!!!!!!!!!!!!!!!!! <div class="grid-box">
 
-
-
-
-      <!--원본!!!!!!!!!!!!!!!!!! <div class="grid-box">
-          <div class="accordion">
-            <div class="design_box thumb-1 thumb-effect" data-target="juice">
-              <div class="thumb-info">
-                <p>상세페이지</p>
-              </div>
-            </div>
-            <div class="design_box thumb-2 thumb-effect" data-target="beready">
-              <div class="thumb-info">
-                <p>상세페이지</p>
-              </div>
-            </div>
-            <div class="design_box thumb-3 thumb-effect" data-target="dessert">
-              <div class="thumb-info">
-                <p>상세페이지</p>
-              </div>
-            </div>
-          </div>
           <div class="banner-wrapper">
             <div class="design_box thumb-4 thumb-effect" data-target="banner">
               <div class="thumb-info">
@@ -633,50 +714,11 @@
                 <p>로고디자인</p>
               </div>
             </div>
-            <div class="design_box thumb-8 thumb-effect" data-target="nonsan">
-              <img src="images/design/nonsan-logo.png" alt="">
-              <div class="thumb-info info-img">
-                <p>관공서디자인</p>
-              </div>
-            </div>
-          </div>
-          <div class="design_box thumb-9 thumb-effect" data-target="postec">
-            <div class="thumb-info info-logo ">
-              <p>홈페이지 리디자인</p>
-            </div>
-            <div>
-              <div class="postec-btn main-img" data-target="postec-main">
-                <p>MAIN</p>
-              </div>
-              <div class="postec-btn sub-img" data-target="postec-sub">
-                <p>SUB</p>
-              </div>
-              <div class="postec-btn mobile" data-target="postec-mobile">
-                <p>MOBILE</p>
-              </div>
+        
             </div>
           </div>
         </div> -->
 
-      <div class="design-pop-up" id="juice">
-        <div class="img_wrapper">
-          <img src="/images/design/detailPage_1.jpg" alt="" class="detail_img">
-        </div>
-      </div>
-      <div class="design-pop-up" id="beready">
-        <div class="img_wrapper">
-          <img src="/images/design/detailPage_2.jpg" alt="" class="detail_img">
-        </div>
-      </div>
-      <div class="design-pop-up" id="dessert">
-        <div class="img_wrapper">
-          <img src="/images/design/detailPage_3.jpg" alt="" class="detail_img">
-        </div>
-      </div>
-
-
-
-    </article>
 
     <article class="gnb-item aboutMe bg-forest" id="aboutMe-page">
       <div class="aboutMe-content">
