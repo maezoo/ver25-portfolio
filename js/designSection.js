@@ -1,3 +1,6 @@
+// =========================================
+// 디자인 탭 메뉴
+// =========================================
 const tapList = document.querySelectorAll('.side-tab li');
 const tapItem = document.querySelectorAll('.tab-content');
 // 초기 설정: 첫 번째 탭과 콘텐츠 보이게
@@ -26,6 +29,28 @@ tapList.forEach(tab => {
     });
 });
 
+// =========================================
+// 디자인 팝업 열기+닫기
+// =========================================
+const designIphone = document.querySelectorAll('.thumb-effect');
+const designPopUp = document.querySelectorAll('.thumb-popUp');
+
+designIphone.forEach(item => {
+    item.addEventListener('click', () => {
+        const targetImg = item.getAttribute('data-target');
+        const targetPopUp = document.querySelector(`#${targetImg}`);
+
+        if (targetPopUp) {
+            targetPopUp.classList.add('show');
+        }
+    });
+});
+
+designPopUp.forEach(showPop => {
+    showPop.addEventListener('click', (event) => {
+        showPop.classList.remove('show');
+    });
+});
 
 
 
@@ -51,7 +76,7 @@ tapList.forEach(tab => {
 //   const logos = document.querySelectorAll('.logo');
 //   const mainSection = document.querySelector('#main-page');
 //   const tabItems = document.querySelectorAll('.gnb-list');
-//   const articles = document.querySelectorAll('.gnb-item');
+//   const articles = document.querySelectorAll('.');
 //   const activeTab = sessionStorage.getItem('activeTab');
 //   const sideBar = document.querySelector('.side-menu');
 //   const mobileMenu = document.querySelector('.mobile-menu');

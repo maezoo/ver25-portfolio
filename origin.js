@@ -85,7 +85,7 @@ const enableScrolling = () => {
 };
 
 const designIphone = document.querySelectorAll('.design_box');
-const designPopUp = document.querySelectorAll('.design-pop-up');
+const designPopUp = document.querySelectorAll('.thumb-popUp');
 // const header = document.querySelector('header');
 
 // 팝업 열기

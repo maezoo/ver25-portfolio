@@ -11,8 +11,6 @@
 }
 
 .design {
-  // overflow-y: scroll;
-
   .design-content {
     width: 100%;
     height: 100%;
@@ -21,9 +19,6 @@
     align-items: center;
     justify-content: center;
     gap: 60px;
-
-    // position: relative;
-    // height: 100%;
 
     .tab-title {
       display: flex;
@@ -40,13 +35,210 @@
         font-size: 1.5rem;
       }
     }
+  }
+}
 
+.tab-wrapper {
+  // margin-right: 50px;
+  width: 1000px;
+  height: 500px;
+  // border-radius: 35px;
+  border-radius: 0px 35px;
+  // box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 15px -10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+
+  // backdrop-filter: blur(3px);
+  // display: flex;
+  // gap: 55px;
+  // padding: 45px 40px;
+
+  .side-tab {
+    li {
+      width: 40px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+      background-color: rgba(245, 240, 230, 0.6);
+
+      p {
+        font-size: 14px;
+        color: #222;
+        writing-mode: sideways-lr;
+      }
+    }
+
+    li.active {
+      background-color: rgba(245, 240, 230, 0.9);
+    }
   }
 
 
 }
 
-.design-pop-up {
+.content-wrapper {
+  position: relative;
+
+  .accordion {
+    gap: 15px;
+
+    .thumb-1 {
+      width: 250px;
+      height: 250px;
+      background: url(/images/design/thumbnail-1.jpeg) no-repeat center;
+      background-size: cover;
+    }
+
+    .thumb-2 {
+      width: 250px;
+      height: 250px;
+      background: url(/images/design/thumbnail-2.jpg) no-repeat center;
+      background-size: cover;
+    }
+
+    .thumb-3 {
+      width: 250px;
+      height: 250px;
+      background: url(/images/design/thumbnail-31.png) no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .nonPos {
+    gap: 15px;
+
+    .thumb-8 {
+      width: 250px;
+      height: 250px;
+      background: url(/images/design/nonsan.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    .thumb-9 {
+      height: 250px;
+      width: 250px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+
+  .concept {
+    gap: 15px;
+
+    .thumb-5 {
+      width: 250px;
+      height: 250px;
+      background: url(/images/design/heywha_banner1.jpg) no-repeat;
+      background-size: cover;
+      background-position: 12%;
+    }
+
+    .thumb-4 {
+      width: 250px;
+      height: 250px;
+      background: red url(/images/design/heywha_banner2.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    // .thumb-6 {
+    //   width: 250px;
+    //   height: 250px;
+    //   background: url(/images/design/cardDesign.jpg) no-repeat;
+    //   background-size: cover;
+    // }
+
+    .thumb-7 {
+      background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+      width: 250px;
+      height: 250px;
+      padding: 15px 10px;
+      position: relative;
+
+      img {
+        width: 230px;
+        height: 230px;
+      }
+    }
+  }
+}
+
+.tab-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0px 35px;
+  background-color: rgba(245, 240, 230, 0.9);
+  width: 960px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+
+  .thumb-effect {
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border: 3px solid #fff;
+    border-radius: 25px;
+
+    .info-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9;
+    }
+
+    .thumb-info {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(100%);
+      transition: all 0.4s ease;
+
+      p {
+        font-family: 'DaeguCatholicUniversity';
+        font-size: 25px;
+        color: #fff;
+        text-shadow: 1px 2px 3px #222;
+      }
+
+
+    }
+
+    &:hover .thumb-info {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(25%);
+    }
+  }
+
+}
+
+.tab-content.show {
+  opacity: 1;
+  z-index: 10;
+}
+
+// ****************** 팝업 ***************** //
+.thumb-popUp {
   display: none;
   position: absolute;
   top: 0;
@@ -78,417 +270,8 @@
   }
 }
 
-.design-pop-up.show {
+.thumb-popUp.show {
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
-
-.tab-wrapper {
-  // margin-right: 50px;
-  width: 1000px;
-  height: 500px;
-  // border-radius: 35px;
-  border-radius: 0px 35px;
-  // box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.3);
-  box-shadow: 15px -10px 25px rgba(0, 0, 0, 0.2);
-  display: flex;
-
-  // backdrop-filter: blur(3px);
-  // display: flex;
-  // gap: 55px;
-  // padding: 45px 40px;
-  .side-tab {
-    li {
-      width: 40px;
-      height: 110px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      cursor: pointer;
-      background-color: rgba(245, 240, 230, 0.6);
-
-      p {
-        font-size: 14px;
-        color: #222;
-        writing-mode: sideways-lr;
-      }
-    }
-
-    li.active {
-      background-color: rgba(245, 240, 230, 0.9);
-    }
-  }
-
-
-  .content-wrapper {
-    position: relative;
-  }
-
-
-
-}
-
-.tab-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 0px 35px;
-  // background-color: rgba(245, 240, 230, 0.7);
-  background-color: rgba(245, 240, 230, 0.9);
-  width: 960px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0;
-}
-
-.tab-content.show {
-  opacity: 1;
-  z-index: 10;
-}
-
-
-.thumb-effect {
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  border: 3px solid #fff;
-  border-radius: 25px;
-
-  &:hover .thumb-info {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(25%);
-  }
-
-  .thumb-info {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(100%);
-    transition: all 0.4s ease;
-
-    p {
-      font-family: 'DaeguCatholicUniversity';
-      font-size: 25px;
-      color: #fff;
-      text-shadow: 1px 2px 3px #222;
-    }
-  }
-}
-
-.info-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9;
-}
-
-.accordion {
-  gap: 15px;
-
-
-  .thumb-1 {
-    width: 250px;
-    height: 250px;
-    background: url(/images/design/thumbnail-1.jpeg) no-repeat center;
-    background-size: cover;
-  }
-
-  .thumb-2 {
-    width: 250px;
-    height: 250px;
-    background: url(/images/design/thumbnail-2.jpg) no-repeat center;
-    background-size: cover;
-  }
-
-  .thumb-3 {
-    width: 250px;
-    height: 250px;
-    background: url(/images/design/thumbnail-31.png) no-repeat;
-    background-size: cover;
-  }
-}
-
-.nonPos {
-  gap: 15px;
-
-  .thumb-8 {
-    width: 250px;
-    height: 250px;
-    background: url(/images/design/nonsan.jpg) no-repeat;
-    background-size: cover;
-  }
-
-  .thumb-9 {
-    height: 250px;
-    width: 250px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-    img {
-      width: 200px;
-      height: 200px;
-    }
-  }
-}
-
-.concept {
-  gap: 15px;
-
-  .thumb-5 {
-    width: 250px;
-    height: 250px;
-    background: url(/images/design/heywha_banner1.jpg) no-repeat;
-    background-size: cover;
-    background-position: 12%;
-  }
-
-  .thumb-4 {
-    width: 250px;
-    height: 250px;
-    background: red url(/images/design/heywha_banner2.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  // .thumb-6 {
-  //   width: 250px;
-  //   height: 250px;
-  //   background: url(/images/design/cardDesign.jpg) no-repeat;
-  //   background-size: cover;
-  // }
-
-  .thumb-7 {
-    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-    width: 250px;
-    height: 250px;
-    padding: 15px 10px;
-    position: relative;
-
-    img {
-      width: 230px;
-      height: 230px;
-    }
-  }
-}
-
-
-
-
-
-//============================================================
-
-// .thumbSwiper {
-//   // width: 950px;
-
-//   .swiper-wrapper {
-//     .swiper-slide {
-//       // background-position: center;
-//       // background-size: cover;
-//       overflow: hidden;
-//       width: 330px;
-//       height: 330px;
-//       transition: all 0.5s ease;
-//       cursor: pointer;
-//       border-radius: 25px;
-//       // border: 3px solid #fff;
-//       box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.5);
-//     }
-
-//     .thumb-effect {
-//       width: 100%;
-//       height: 100%;
-//       transition: all 0.5s ease;
-//       // scale: 1.5;
-
-//       &:hover {
-//         // scale: 1;
-
-//       }
-
-
-//       &:hover .thumb-info {
-//         opacity: 1;
-//         visibility: visible;
-//         transform: translateY(25%);
-//       }
-
-//       .thumb-info {
-//         width: 100%;
-//         height: 100%;
-//         background-color: rgba(0, 0, 0, 0.5);
-//         display: flex;
-//         justify-content: center;
-//         // padding-bottom: 90px;
-//         // align-items: flex-end;
-//         padding-top: 30px;
-//         opacity: 0;
-//         visibility: hidden;
-//         transform: translateY(100%);
-//         transition: all 0.4s ease;
-
-//         p {
-//           font-family: 'DaeguCatholicUniversity';
-//           font-size: 25px;
-//           color: #fff;
-//           text-shadow: 1px 2px 3px #222;
-//         }
-//       }
-
-//     }
-
-
-//     .thumb-1 {
-//       // width: 250px;
-//       // height: 250px;
-//       background: url(/images/design/thumbnail-1.jpeg) no-repeat center;
-//       background-size: cover;
-//     }
-
-//     .thumb-2 {
-//       // width: 250px;
-//       // height: 250px;
-//       background: url(/images/design/thumbnail-2.jpg) no-repeat center;
-//       background-size: cover;
-//     }
-
-//     .thumb-3 {
-//       // width: 250px;
-//       // height: 250px;
-//       background: url(/images/design/thumbnail-31.png) no-repeat;
-//       background-size: cover;
-//     }
-
-//     .thumb-5 {
-//       background: url(/images/design/heywha_banner1.jpg) no-repeat;
-//       background-size: cover;
-//       background-position: 12%;
-//     }
-
-//     .thumb-4 {
-//       background: red url(/images/design/heywha_banner2.jpg) no-repeat;
-//       background-size: cover;
-//       background-position: center;
-//     }
-
-//     .thumb-6 {
-//       background: url(/images/design/cardDesign.jpg) no-repeat;
-//       background-size: cover;
-//     }
-
-//     .thumb-7 {
-//       background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-//       padding: 15px 10px;
-
-//       img {
-//         width: 100%;
-//         height: 100%;
-//       }
-//     }
-
-//     .thumb-8 {
-//       background: url(/images/design/nonsan.jpg) no-repeat;
-//       background-size: cover;
-//       // align-items: center;
-//       // background-color: white;
-//       // position: relative;
-
-//       // img {
-//       //   width: 100%;
-//       // }
-//     }
-
-//     .thumb-9 {
-//       background-color: white;
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-
-//       img {
-//         width: 200px;
-//         height: 200px;
-//       }
-//     }
-//   }
-// }
-
-
-
-// .info-img {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: 9;
-// }
-
-
-
-// 원본!!!!!!!!!!!!!!!!!!!!! .grid-box {
-//   // display: flex;
-//   overflow: hidden;
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   grid-template-rows: repeat(4, 1fr);
-//   row-gap: 10px;
-
-
-
-//   .banner-wrapper {
-//     grid-row: 2/3;
-//     display: flex;
-//     gap: 10px;
-
-//     .thumb-4 {
-//       background: url(/images/design/heywha_banner1.jpg) no-repeat;
-//       background-size: cover;
-//       // width: 380px;
-//       width: 430px;
-//       height: 250px;
-//       background-position: 8%;
-//       // background-position: center;
-
-//       &:hover {
-//         width: 580px;
-//       }
-//     }
-
-//     .thumb-5 {
-//       background: red url(/images/design/heywha_banner2.jpg) no-repeat;
-//       background-size: cover;
-//       width: 330px;
-//       height: 250px;
-//       background-position: center;
-
-//       &:hover {
-//         width: 580px;
-//       }
-//     }
-//   }
-
-//   .card-logo {
-//     grid-row: 3/4;
-//     display: flex;
-//     gap: 10px;
-
-//     .thumb-6 {
-//       background: url(/images/design/cardDesign.jpg) no-repeat;
-//       background-size: cover;
-//       width: 250px;
-//       height: 250px;
-//     }
-
-
-// }
