@@ -1,21 +1,23 @@
 // =========================================
 // 디자인 탭 메뉴
 // =========================================
-const tapList = document.querySelectorAll('.side-tab li');
-const tapItem = document.querySelectorAll('.tab-content');
+const tabList = document.querySelectorAll('.side-tab li');
+const tabItem = document.querySelectorAll('.tab-content');
+const tabWrap = document.querySelector('.content-wrapper');
+
 // 초기 설정: 첫 번째 탭과 콘텐츠 보이게
-if (tapList.length > 0 && tapItem.length > 0) {
-    tapList[0].classList.add('active');
-    tapItem[0].classList.add('show');
+if (tabList.length > 0 && tabItem.length > 0) {
+    tabList[0].classList.add('active');
+    tabItem[0].classList.add('show');
 }
 
-tapList.forEach(tab => {
+tabList.forEach(tab => {
     tab.addEventListener('click', () => {
         // 모든 콘텐츠 숨기기
-        tapItem.forEach(item => item.classList.remove('show'));
+        tabItem.forEach(item => item.classList.remove('show'));
 
         // 모든 탭에서 active 제거
-        tapList.forEach(t => t.classList.remove('active'));
+        tabList.forEach(t => t.classList.remove('active'));
 
         // 클릭된 탭에 active 추가
         tab.classList.add('active');
@@ -24,6 +26,14 @@ tapList.forEach(tab => {
         const targetId = tab.getAttribute('data-target');
         const targetContent = document.querySelector(targetId);
         if (targetContent) {
+
+            tabWrap.classList.add('rotate');
+
+            // 애니메이션 후 클래스 제거 (애니메이션 지속시간과 동일하게 맞추기)
+            setTimeout(() => {
+                tabWrap.classList.remove('rotate');
+            }, 800);
+            // =======================
             targetContent.classList.add('show');
         }
     });
