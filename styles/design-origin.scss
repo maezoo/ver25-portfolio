@@ -1,0 +1,339 @@
+@font-face {
+  font-family: 'DaeguCatholicUniversity';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2503@1.0/DaeguCatholicUniversity.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.click_effect {
+  font-family: "InkLipquid";
+  font-size: 2.2rem;
+}
+
+.design {
+  .design-content {
+    // padding-top: 90px;
+    padding-bottom: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    // justify-content: center;
+    justify-content: flex-end;
+    // align-items: center;
+
+    .tab-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 600;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.tab-wrapper {
+
+  // background-color: yellow;
+  height: 520px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+
+  background-color: rgba(245, 240, 230, 0.4);
+  position: relative;
+
+  .side-tab {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    // justify-content: center;
+    // align-items: center;
+    // left: calc(width - 840px);
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 999;
+
+    img {
+      width: 15px;
+    }
+
+    li {
+      width: 200px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+      text-align: center;
+      gap: 10px;
+      cursor: pointer;
+
+      p {
+        font-size: 15px;
+        color: #222;
+      }
+    }
+
+    li.active {
+      background-color: rgba(245, 240, 230, 0.9);
+    }
+  }
+
+}
+
+.content-wrapper {
+  background-color: rgba(245, 240, 230, 0.9);
+
+  position: relative;
+  max-width: 840px;
+  width: 100%;
+  height: 100%;
+  // width: fit-content;
+
+  // border-radius: 0px 35px;
+
+  // box-shadow: 15px -10px 25px rgba(0, 0, 0, 0.2);
+
+  .tab-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 840px;
+
+    // background-color: rgba(245, 240, 230, 0.5);
+    // width: 900px;
+    // height: 580px;
+    // width: 100%;
+    // height: 100%;
+
+    .thumb-effect {
+      overflow: hidden;
+      cursor: pointer;
+      // transition: all 0.5s ease;
+      border: 3px solid #fff;
+      border-radius: 20px;
+
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+      &:hover .thumb-info {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(25%);
+      }
+    }
+
+    // 원본 .thumb-effect {
+    //   overflow: hidden;
+    //   cursor: pointer;
+    //   transition: all 0.5s ease;
+    //   border: 3px solid #fff;
+
+    //   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    //   border-radius: 20px;
+    // }
+
+    .info-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9;
+    }
+
+    .thumb-info {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(100%);
+      transition: all 0.4s ease;
+
+      p {
+        font-family: 'DaeguCatholicUniversity';
+        font-size: 25px;
+        color: #fff;
+        text-shadow: 1px 2px 3px #222;
+      }
+    }
+  }
+
+  .tab-content.show {
+    opacity: 1;
+    z-index: 10;
+  }
+
+  .accordion {
+
+    >div {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .thumb-1 {
+    background: url(/images/design/thumbnail-1.jpeg) no-repeat;
+    background-size: cover;
+  }
+
+  .thumb-2 {
+    background: url(/images/design/thumbnail-2.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .thumb-3 {
+    background: url(/images/design/thumbnail-31.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+/* 회전 애니메이션 */
+.content-wrapper.rotate {
+  animation: rotateFade 0.8s ease;
+}
+
+@keyframes rotateFade {
+  0% {
+    transform: rotateY(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+}
+
+// ============================
+.nonPos {
+
+
+
+  .thumb-8 {
+    width: 250px;
+    height: 250px;
+    background: url(/images/design/nonsan.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .thumb-9 {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    img {
+      width: 180px;
+      height: 180px;
+    }
+  }
+}
+
+.loBan {
+  flex-direction: column;
+
+  .thumbNail-box {
+    display: flex;
+    gap: 15px;
+  }
+
+  .thumb-5 {
+    width: 570px;
+    height: 250px;
+    background: url(/images/design/heywha_banner1.jpg) no-repeat;
+    background-position: 12%;
+    transition: all 0.5s ease;
+    background-size: cover;
+
+  }
+
+  .thumb-4 {
+    width: 570px;
+    height: 250px;
+    background: url(/images/design/heywha_banner2.jpg) no-repeat;
+    background-size: contain;
+    transition: all 0.5s ease;
+  }
+
+  .thumb-6 {
+    width: 250px;
+    height: 250px;
+    background: url(/images/design/cardDesign.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .thumb-7 {
+    width: 250px;
+    height: 250px;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    padding: 10px;
+    position: relative;
+
+    img {
+      width: 230px;
+      height: 230px;
+    }
+  }
+}
+
+
+
+// ****************** 팝업 ***************** //
+.thumb-popUp {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+
+  .img_wrapper {
+    overflow-y: scroll;
+    width: 400px;
+    height: 100vh;
+  }
+
+  .postec-wrapper {
+    // overflow-y: scroll;
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .detail_img {
+      width: 100%;
+    }
+  }
+}
+
+.thumb-popUp.show {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
