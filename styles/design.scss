@@ -314,15 +314,53 @@
   background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
 
-  .img_wrapper {
+  .yes-scroll {
     overflow-y: scroll;
-    width: 400px;
     height: 100vh;
 
     .detail_img {
-      width: 100%;
+      width: 450px;
+    }
+
+    .popUp-nonsan {
+      width: 600px;
     }
   }
+
+  .no-scroll {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .inner-bg {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: fit-content;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+    height: 500px;
+
+    .popUp-logo {
+      width: 500px;
+      padding: 20px;
+    }
+
+    .popUp-card {
+      width: 500px;
+    }
+  }
+
+  .ns-inner {
+    height: 324px;
+    width: fit-content;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+
+    .popUp-ban {
+      width: 750px;
+      height: 324px;
+    }
+
+  }
+
 
   // .postec-wrapper {
   //   // overflow-y: scroll;
