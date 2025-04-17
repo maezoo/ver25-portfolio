@@ -1,25 +1,20 @@
-@font-face {
-  font-family: 'DaeguCatholicUniversity';
-  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2503@1.0/DaeguCatholicUniversity.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .click_effect {
   font-family: "InkLipquid";
   font-size: 2.2rem;
 }
 
 .design {
+  // display: flex;
+  // justify-content: center;
+
   .design-content {
+    padding-top: 40px;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // justify-content: flex-end;
     gap: 70px;
-    // padding-bottom: 150px;
 
     .tab-title {
       display: flex;
@@ -40,16 +35,14 @@
 }
 
 .thumb-effect {
-  width: 220px;
-  height: 220px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-
-
   overflow: hidden;
   cursor: pointer;
-  // transition: all 0.5s ease;
-  border: 2.5px solid #fff;
-  border-radius: 20px;
+  width: 220px;
+  height: 220px;
+  // border: 2.5px solid #fff;
+  // border-radius: 10px;
+  transition: all 0.5s ease;
+
 
 
   &:hover .thumb-info {
@@ -57,26 +50,34 @@
     visibility: visible;
     transform: translateY(25%);
   }
+
+  &:hover .thumb-info img {
+    transition-delay: 0.1s;
+    scale: 6;
+
+  }
+
+
 }
+
 
 .thumb-info {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  // background-color: rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 50px;
   opacity: 0;
   visibility: hidden;
   transform: translateY(100%);
-  transition: all 0.4s ease;
+  transition: transform 0.4s ease;
 
-  p {
-    // font-family: 'DaeguCatholicUniversity';
-    font-size: 25px;
-    color: #fff;
-    text-shadow: 1px 2px 3px #222;
+  img {
+    transition: scale 0.5s ease;
+    width: 10px;
+    height: 10px;
+    filter: invert(100);
   }
 }
 
@@ -150,19 +151,21 @@
 .thumbNail-wrapper {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 400px;
+  // background-color: purple;
 
   .tab-content {
     width: 100%;
     height: 100%;
-    // background-color: rosybrown;
     display: flex;
-    gap: 20px;
+    gap: 40px;
+    // padding-top: 30px;
     align-items: center;
     justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
+    // background-color: aqua;
 
     // height: fit-content;
     // padding: 5px 10px;
@@ -170,6 +173,38 @@
     opacity: 0;
     visibility: 0;
     // transition: all 0.5s ease;
+  }
+
+  @font-face {
+    font-family: 'Unggungqui';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_11@1.0/Unggungqui.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .thumbNail {
+    height: 320px;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Unggungqui';
+    color: #333;
+
+    h1 {
+      text-align: center;
+      font-size: 35px;
+      margin-top: 15px;
+
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+
 
   }
 
@@ -178,7 +213,7 @@
     opacity: 1;
     z-index: 10;
 
-    // animation: stretch 1s ease;
+    animation: stretch 1s ease;
 
   }
 
@@ -213,8 +248,6 @@
   }
 
   .thumb-4 {
-    // width: 250px;
-    // height: 250px;
     background: url(/images/design/nonsan.jpg) no-repeat;
     background-size: cover;
   }
@@ -226,7 +259,7 @@
     justify-content: center;
     position: relative;
 
-    img {
+    .projectImg1 {
       width: 120px;
       height: 120px;
     }
@@ -238,9 +271,7 @@
     transition: all 0.5s ease;
     background-size: cover;
 
-    &:hover {
-      width: 410px;
-    }
+
   }
 
   .thumb-7 {
@@ -249,9 +280,7 @@
     background-position: center;
     transition: all 0.5s ease;
 
-    &:hover {
-      width: 410px;
-    }
+
   }
 
   .thumb-8 {
@@ -260,13 +289,15 @@
   }
 
   .thumb-9 {
-    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-    padding: 15px;
     position: relative;
+    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+    background: url(/images/design/cake-bg.jpg) no-repeat;
+    padding: 15px;
+    background-size: cover;
 
-    img {
-      width: 150px;
-      height: 150px;
+    .projectImg2 {
+      width: 200px;
+      height: 200px;
     }
   }
 }
@@ -287,21 +318,23 @@
     overflow-y: scroll;
     width: 400px;
     height: 100vh;
-  }
-
-  .postec-wrapper {
-    // overflow-y: scroll;
-    width: 400px;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
 
     .detail_img {
       width: 100%;
     }
   }
+
+  // .postec-wrapper {
+  //   // overflow-y: scroll;
+  //   width: 400px;
+  //   height: 100vh;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   gap: 20px;
+
+  //
+  // }
 }
 
 .thumb-popUp.show {

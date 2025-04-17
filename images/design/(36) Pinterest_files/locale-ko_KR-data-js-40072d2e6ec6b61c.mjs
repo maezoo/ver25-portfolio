@@ -1,0 +1,2 @@
+(self.__LOADABLE_LOADED_CHUNKS__=self.__LOADABLE_LOADED_CHUNKS__||[]).push([[84710],{446665:(_,r,e)=>{var l={locale:"ko-KR",i18nStrings:void 0,plural:e(785278)};_.exports=l},785278:_=>{_.exports=function(_){return 0}}}]);
+//# sourceMappingURL=https://sm.pinimg.com/webapp/locale-ko_KR-data-js-40072d2e6ec6b61c.mjs.map
