@@ -61,7 +61,8 @@ main {
   display: none;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-  background: url(../images/forest.jpg) no-repeat;
+  // background: url(../images/forest.jpg) no-repeat;
+  background: url(/images/forest.jpg) no-repeat;
   background-position: 100% -2px;
   background-size: cover;
 }
