@@ -1,12 +1,16 @@
+@font-face {
+  font-family: 'Unggungqui';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_11@1.0/Unggungqui.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .click_effect {
   font-family: "InkLipquid";
   font-size: 2.2rem;
 }
 
 .design {
-  // display: flex;
-  // justify-content: center;
-
   .design-content {
     padding-top: 40px;
     width: 100%;
@@ -39,11 +43,7 @@
   cursor: pointer;
   width: 220px;
   height: 220px;
-  // border: 2.5px solid #fff;
-  // border-radius: 10px;
   transition: all 0.5s ease;
-
-
 
   &:hover .thumb-info {
     opacity: 1;
@@ -56,10 +56,7 @@
     scale: 6;
 
   }
-
-
 }
-
 
 .thumb-info {
   width: 100%;
@@ -90,30 +87,17 @@
 
 .content-wrapper {
   width: 100%;
-  // background-color: rgba(255, 255, 255, 0.5);
-  // background-color: rgb(253, 240, 249);
-  // justify-content: center;
-  // width: fit-content;
-  // padding: 10px 0;
-  // height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  // gap: 10px;
-
   .side-tab {
-    // background-color: rgb(253, 240, 249);
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    img {
-      width: 17px;
-    }
 
     li {
       width: calc(100% / 3);
@@ -124,20 +108,13 @@
       padding-left: 20px;
       gap: 10px;
       cursor: pointer;
-      font-size: 15px;
-      color: #222;
-    }
+      font-size: 14px;
+      color: #333;
 
-    li:nth-child(1) {
-      // background-color: #2e943f;
-    }
+      img {
+        width: 17px;
+      }
 
-    li:nth-child(2) {
-      // background-color: #accbee;
-    }
-
-    li:nth-child(3) {
-      // background-color: #2c6db6;
     }
 
     li.active {
@@ -151,113 +128,86 @@
 .thumbNail-wrapper {
   position: relative;
   width: 100%;
-  height: 400px;
-  // background-color: purple;
+  height: 420px;
 
   .tab-content {
+    padding-top: 40px;
     width: 100%;
     height: 100%;
     display: flex;
     gap: 40px;
-    // padding-top: 30px;
-    align-items: center;
     justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
-    // background-color: aqua;
-
-    // height: fit-content;
-    // padding: 5px 10px;
-    // gap: 10px;
     opacity: 0;
     visibility: 0;
-    // transition: all 0.5s ease;
-  }
-
-  @font-face {
-    font-family: 'Unggungqui';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/naverfont_11@1.0/Unggungqui.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  .thumbNail {
-    height: 320px;
-    background: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    font-family: 'Unggungqui';
-    color: #333;
-
-    h1 {
-      text-align: center;
-      font-size: 35px;
-      margin-top: 15px;
-
-    }
-
-    p {
-      text-align: center;
-      font-size: 20px;
-    }
-
-
   }
 
   .tab-content.show {
     visibility: 1;
     opacity: 1;
     z-index: 10;
-
     animation: stretch 1s ease;
+  }
+}
 
+@keyframes stretch {
+  0% {
+    transform: translate3d(-180px, 0, 0);
+    opacity: 0;
   }
 
-  @keyframes stretch {
-    0% {
-      transform: translate3d(-180px, 0, 0);
-      opacity: 0;
-    }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
 
-    100% {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
+.thumbNail {
+  height: 320px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Unggungqui';
+  color: #333;
+
+  h1 {
+    text-align: center;
+    font-size: 35px;
+    margin-top: 15px;
   }
 
-
+  p {
+    text-align: center;
+    font-size: 20px;
+  }
 
   .thumb-1 {
-    background: url(/images/design/thumbnail-1.jpeg) no-repeat;
-    background-size: cover;
+    background: url(/images/design/thumbnail-1.jpeg) no-repeat center / cover;
   }
 
   .thumb-2 {
-    background: url(/images/design/thumbnail-2.jpg) no-repeat center;
-    background-size: cover;
+    background: url(/images/design/thumbnail-2.jpg) no-repeat center / cover;
   }
 
   .thumb-3 {
-
-    background: url(/images/design/thumbnail-31.png) no-repeat;
-    background-size: cover;
+    background: url(/images/design/thumbnail-31.png) no-repeat center / cover;
   }
 
   .thumb-4 {
-    background: url(/images/design/nonsan.jpg) no-repeat;
-    background-size: cover;
+    background: url(/images/design/nonsan.jpg) no-repeat top / cover;
   }
 
   .thumb-5 {
     background-color: white;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
 
     .projectImg1 {
       width: 120px;
@@ -266,34 +216,21 @@
   }
 
   .thumb-6 {
-    background: red url(/images/design/heywha_banner1.jpg) no-repeat;
-    background-position: 12%;
-    transition: all 0.5s ease;
-    background-size: cover;
-
-
+    background: url(/images/design/heywha_banner1.jpg) no-repeat 12% / cover;
   }
 
   .thumb-7 {
-    background: url(/images/design/heywha_banner2.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: all 0.5s ease;
-
-
+    background: url(/images/design/heywha_banner2.jpg) no-repeat center / cover;
   }
 
   .thumb-8 {
-    background: url(/images/design/cardDesign.jpg) no-repeat;
-    background-size: cover;
+    background: url(/images/design/cardDesign.jpg) no-repeat center / cover;
   }
 
   .thumb-9 {
     position: relative;
-    background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-    background: url(/images/design/cake-bg.jpg) no-repeat;
+    background: url(/images/design/cake-bg.jpg) no-repeat center / cover;
     padding: 15px;
-    background-size: cover;
 
     .projectImg2 {
       width: 200px;
@@ -301,6 +238,57 @@
     }
   }
 }
+
+
+.postecSlide {
+  width: 750px;
+  position: relative;
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+
+    .postec-scroll {
+      height: 100vh;
+      overflow-y: scroll;
+
+      img {
+        width: 600px;
+      }
+    }
+  }
+}
+
+
+.postecSlide-prev,
+.postecSlide-next {
+  border-style: solid;
+  position: absolute;
+  top: 50%;
+}
+
+.postecSlide-prev {
+  border-width: 33px 33px 33px 0;
+  border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
+}
+
+.postecSlide-next {
+  border-width: 33px 0 33px 33px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
+  right: 0%;
+
+  // padding: 2.5px 5px;
+
+  // img {
+  //   // filter: invert(80);
+  //   width: 50px;
+  //   height: 50px;
+  // }
+
+  z-index: 999999999;
+
+}
+
 
 // ****************** 팝업 ***************** //
 .thumb-popUp {
@@ -324,6 +312,41 @@
 
     .popUp-nonsan {
       width: 600px;
+    }
+  }
+
+  .mobile-phone {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .iPhone {
+      width: 300px;
+      height: 620px;
+      border-radius: 50px;
+      box-shadow: 9px 2px 10px 0px rgba(0, 0, 0, 0.8);
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+      outline: 3px ridge #444444;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .header-fixed {
+      width: 300px;
+      height: 94px;
+      position: absolute;
+    }
+
+    .mob-content {
+      overflow-y: scroll;
+      width: 300px;
+      height: 620px;
+
+      img {
+        width: 100%;
+      }
     }
   }
 
@@ -360,19 +383,6 @@
     }
 
   }
-
-
-  // .postec-wrapper {
-  //   // overflow-y: scroll;
-  //   width: 400px;
-  //   height: 100vh;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   gap: 20px;
-
-  //
-  // }
 }
 
 .thumb-popUp.show {

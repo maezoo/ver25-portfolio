@@ -1,3 +1,4 @@
+
 // =========================================
 // 디자인 탭 메뉴
 // =========================================
@@ -42,10 +43,12 @@ tabList.forEach(tab => {
 // =========================================
 // 디자인 팝업 열기+닫기
 // =========================================
-const designIphone = document.querySelectorAll('.thumb-effect');
+const polaroid = document.querySelectorAll('.modal');
 const designPopUp = document.querySelectorAll('.thumb-popUp');
+// const designPopUp = document.querySelectorAll('.pop-close');
+// const postecPop = document.querySelector('.postec-popUp');
 
-designIphone.forEach(item => {
+polaroid.forEach(item => {
     item.addEventListener('click', () => {
         const targetImg = item.getAttribute('data-target');
         const targetPopUp = document.querySelector(`#${targetImg}`);
@@ -61,7 +64,6 @@ designPopUp.forEach(showPop => {
         showPop.classList.remove('show');
     });
 });
-
 
 
 

@@ -1,49 +1,14 @@
 
-// $(function () {
-//   $('.slider-for').slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: false,
-//     fade: true,
-//     asNavFor: '.slider-nav'
-//   });
-//   $('.slider-nav').slick({
-//     slidesToShow: 5,
-//     slidesToScroll: 1,
-//     asNavFor: '.slider-for',
-//     dots: true,
-//     centerMode: true,
-//     focusOnSelect: true
-//   });
-// });
-
-
-
-var thumbSwiper = new Swiper(".thumbSwiper", {
-  // keyboard: true,
-  // // autoplay: {
-  // //   delay: 1500,
-  // // },
-  // effect: "coverflow",
-  // grabCursor: true,
-  // centeredSlides: true,
-  // slidesPerView: "auto",
-  // coverflowEffect: {
-  //   rotate: 50,
-  //   stretch: 0,
-  //   depth: 100,
-  //   modifier: 1,
-  //   slideShadows: true,
-  // },
-  // pagination: {
-  // },
-  slidesPerView: 1,
-  // spaceBetween: 30,
-  pagination: {
-    el: ".thumb-pagination",
-    // clickable: true,
+var postecSlide = new Swiper(".postecSlide", {
+  keyboard: true,
+  loop: true,
+  navigation: {
+    nextEl: ".postecSlide-next",
+    prevEl: ".postecSlide-prev",
   },
 });
+
+
 
 // =====================================================
 // =====================================================
