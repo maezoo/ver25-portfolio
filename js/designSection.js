@@ -1,3 +1,117 @@
+const polaroid = document.querySelectorAll('.modal');
+let des1slide, des2slide, des3slide;
+
+document.addEventListener("DOMContentLoaded", function () {
+    // 슬라이드 초기화
+    des1slide = new Swiper(".des1-slide", {
+        keyboard: true,
+        navigation: {
+            nextEl: ".des1-Slide-next",
+            prevEl: ".des1-Slide-prev",
+        },
+    });
+
+    des2slide = new Swiper(".des2-slide", {
+        keyboard: true,
+        navigation: {
+            nextEl: ".des2-Slide-next",
+            prevEl: ".des2-Slide-prev",
+        },
+    });
+
+    des3slide = new Swiper(".des3-slide", {
+        keyboard: true,
+        navigation: {
+            nextEl: ".des3-Slide-next",
+            prevEl: ".des3-Slide-prev",
+        },
+    });
+
+    // 썸네일 클릭 시 팝업 열기 + 해당 슬라이드로 이동
+    polaroid.forEach((item) => {
+        item.addEventListener("click", () => {
+            const targetId = item.getAttribute("data-target");
+            const slideIndex = parseInt(item.getAttribute("data-slide-index"));
+
+            let popup = null;
+            let swiperInstance = null;
+
+            // 각 팝업에 맞는 swiper와 팝업 설정
+            if (["juice", "sunscreen", "dessert"].includes(targetId)) {
+                popup = document.querySelector("#des1slide");
+                swiperInstance = des1slide;
+            } else if (["nonsan", "postec"].includes(targetId)) {
+                popup = document.querySelector("#des2slide");
+                swiperInstance = des2slide;
+            } else if (["logo", "card", "banner-1", "banner-2"].includes(targetId)) {
+                popup = document.querySelector("#des3slide");
+                swiperInstance = des3slide;
+            }
+
+            // 팝업 열기
+            if (popup && swiperInstance) {
+                popup.classList.add("show");
+                if (!isNaN(slideIndex)) {
+                    swiperInstance.slideTo(slideIndex);
+                }
+            }
+        });
+    });
+
+    const closeBtn = document.querySelectorAll(".close-btn");
+    closeBtn.forEach((btnX) => {
+        btnX.addEventListener("click", function (e) {
+            e.preventDefault();
+            const popup = this.closest(".thumb-popUp");
+            if (popup) {
+                popup.classList.remove("show");
+            }
+        });
+    });
+});
+
+// polaroid.forEach((item) => {
+//     item.addEventListener('click', () => {
+//         const targetId = item.getAttribute('data-target');
+//         const slideIndex = parseInt(item.getAttribute('data-slide-index'));
+
+//         const targetPopup = Array.from(designPopUp).find(popup => {
+//             const swiperContainer = popup.querySelector('.swiper');
+//             return swiperContainer && swiperContainer.getAttribute('data-target') === targetId;
+//         });
+
+//         if (targetPopup) {
+//             targetPopup.classList.add('show');
+
+//             if (!isNaN(slideIndex)) {
+//                 if (targetId === "des3slide") {
+//                     des3slide.slideTo(slideIndex); // or slideIndex - 1
+//                 }
+//             }
+// }
+// });
+// });
+// });
+
+// 닫기 버튼 이벤트 등록
+// const closeBtn = targetPopup.querySelector('.close-btn');
+// if (closeBtn) {
+//     closeBtn.addEventListener('click', () => {
+//         targetPopup.classList.remove('show');
+//     }, { once: true });
+// }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // =========================================
 // 디자인 탭 메뉴
@@ -43,27 +157,54 @@ tabList.forEach(tab => {
 // =========================================
 // 디자인 팝업 열기+닫기
 // =========================================
-const polaroid = document.querySelectorAll('.modal');
-const designPopUp = document.querySelectorAll('.thumb-popUp');
 // const designPopUp = document.querySelectorAll('.pop-close');
-// const postecPop = document.querySelector('.postec-popUp');
+// const postecPop = docu ent.querySelector('.postec-popUp');
 
-polaroid.forEach(item => {
-    item.addEventListener('click', () => {
-        const targetImg = item.getAttribute('data-target');
-        const targetPopUp = document.querySelector(`#${targetImg}`);
+// const polaroid = document.querySelectorAll('.modal');
 
-        if (targetPopUp) {
-            targetPopUp.classList.add('show');
-        }
-    });
-});
 
-designPopUp.forEach(showPop => {
-    showPop.addEventListener('click', (event) => {
-        showPop.classList.remove('show');
-    });
-});
+// 
+
+
+
+
+// .forEach(showPop => {
+// closeBtn.forEach(showPop => {
+//     showPop.addEventListener('click', (event) => {
+
+
+
+
+// // 팝업 닫기 - 배경 클릭
+// popup.addEventListener('click', () => {
+//     popup.classList.remove('show');
+// });
+
+// // 팝업 닫기 - close 버튼 따로 눌렀을 때도 닫히게 하려면 아래도 추가 가능
+// const closeBtn = popup.querySelector('.close-btn');
+// if (closeBtn) {
+//     closeBtn.addEventListener('click', (e) => {
+//         e.stopPropagation(); // 배경 닫기 이벤트 방지
+//         popup.classList.remove('show');
+//     });
+// }
+
+// polaroid.forEach(item => {
+//     item.addEventListener('click', () => {
+//         const targetImg = item.getAttribute('data-index');
+//         const targetPopUp = document.querySelector(`#${targetImg}`);
+
+//         if (targetPopUp) {
+//             targetPopUp.classList.add('show');
+//         }
+//     });
+// });
+
+// designPopUp.forEach(showPop => {
+//     showPop.addEventListener('click', (event) => {
+//         showPop.classList.remove('show');
+//     });
+// });
 
 
 
