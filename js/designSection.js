@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             prevBtn.classList.remove("hidden");
         }
     }
-    // 팝업 열기 + 해당 슬라이드로 이동
+    // *** 팝업 열기 + 해당 슬라이드로 이동 ***
     polaroid.forEach((item) => {
         item.addEventListener("click", () => {
             const targetId = item.getAttribute("data-target");
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let popup = null;
             let swiperInstance = null;
 
-            // 각 팝업에 맞는 swiper와 팝업 설정
+            // *** 각 썸네일에 맞는 팝업 설정 ***
             if (["juice", "sunscreen", "dessert"].includes(targetId)) {
                 popup = document.querySelector("#des1slide");
                 swiperInstance = des1slide;
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 swiperInstance = des3slide;
             }
 
-            // 팝업 열기
+            // *** 팝업 열기 + 방향키 표시 ***
             if (popup && swiperInstance) {
                 popup.classList.add("show");
                 if (!isNaN(slideIndex)) {
@@ -116,7 +116,7 @@ const tabList = document.querySelectorAll('.side-tab li');
 const tabItem = document.querySelectorAll('.tab-content');
 const tabWrap = document.querySelector('.content-wrapper');
 
-// 초기 설정: 첫 번째 탭과 콘텐츠 보이게
+// *** 첫 번째 탭과 콘텐츠 보이게 ***
 if (tabList.length > 0 && tabItem.length > 0) {
     tabList[0].classList.add('active');
     tabItem[0].classList.add('show');
@@ -124,27 +124,18 @@ if (tabList.length > 0 && tabItem.length > 0) {
 
 tabList.forEach(tab => {
     tab.addEventListener('click', () => {
-        // 모든 콘텐츠 숨기기
         tabItem.forEach(item => item.classList.remove('show'));
-
-        // 모든 탭에서 active 제거
         tabList.forEach(t => t.classList.remove('active'));
-
-        // 클릭된 탭에 active 추가
         tab.classList.add('active');
 
-        // 연결된 콘텐츠 선택해서 보이기
         const targetId = tab.getAttribute('data-target');
         const targetContent = document.querySelector(targetId);
         if (targetContent) {
 
             tabWrap.classList.add('rotate');
-
-            // 애니메이션 후 클래스 제거 (애니메이션 지속시간과 동일하게 맞추기)
             setTimeout(() => {
                 tabWrap.classList.remove('rotate');
             }, 800);
-            // =======================
             targetContent.classList.add('show');
         }
     });
