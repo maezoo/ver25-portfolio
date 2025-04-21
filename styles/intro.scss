@@ -62,12 +62,17 @@ canvas#canvas {
     }
 
     .line {
-      width: 100%;
+      width: 385px;
       border-top: 1px solid #DA7766;
-      padding-top: 5px;
+      padding-top: 10px;
 
       p {
+        display: inline;
         margin-top: 5px;
+      }
+
+      p:nth-child(3) {
+        display: inline-block;
       }
     }
   }

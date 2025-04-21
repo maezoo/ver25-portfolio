@@ -22,8 +22,7 @@ header {
     align-items: flex-end;
 
     .logo {
-      // color: #222;
-      // color: #222;
+      color: #222;
       font-weight: 300;
       font-size: 14px;
       text-transform: uppercase;
@@ -33,9 +32,13 @@ header {
     }
 
     .hamburger {
+      position: absolute;
+      right: 5rem;
+      top: 3.2rem;
+      z-index: 100;
       width: 34px;
-      cursor: pointer;
       display: block;
+      cursor: pointer;
 
       span {
         display: block;
@@ -47,7 +50,6 @@ header {
     }
   }
 }
-
 
 .overlay-navigation {
   position: fixed;
@@ -201,24 +203,6 @@ header {
 
 // ======================================
 
-.hamburger {
-  position: absolute;
-  right: 5rem;
-  top: 3.2rem;
-  z-index: 100;
-  width: 34px;
-  display: block;
-  cursor: pointer;
-
-  span {
-    display: block;
-    height: 1px;
-    background-color: #fff;
-    cursor: pointer;
-    margin-top: 8px;
-  }
-}
-
 .animate-top-bar {
   -webkit-animation: animate-top-bar 0.6s linear 1 both;
   animation: animate-top-bar 0.6s linear 1 both;
@@ -370,68 +354,5 @@ Animation keyframes
 
   100% {
     background-color: #fff;
-  }
-}
-
-@media (max-width: 640px) {
-  .navigation {
-    ul {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      flex-direction: column;
-
-      .gnb-list {
-        height: 20%;
-
-        a {
-          font-size: 11px;
-        }
-
-        a:before {
-          width: 25px;
-        }
-
-        a:after {
-          font-size: 0.6rem;
-          bottom: -25px;
-        }
-
-        a:hover:after {
-          transform: translateY(0);
-        }
-      }
-
-      .gnb-list:before {
-        content: "";
-        width: 70px;
-        height: 2px;
-        background-color: #fff;
-        position: absolute;
-        top: 46.5%;
-        left: 0;
-        z-index: 100;
-        transform: translateX(-100%);
-        opacity: 0;
-        transition: all 0.3s linear;
-      }
-
-      .gnb-list:hover:before {
-        transform: translateX(0);
-        opacity: 1;
-      }
-
-      .gnb-list:first-child:hover {
-        transform: translateX(0);
-        opacity: 1;
-      }
-
-      .gnb-list:after {
-        bottom: 30%;
-      }
-    }
-  }
-
-  .hamburger {
-    right: 1rem;
   }
 }
