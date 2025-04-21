@@ -1,16 +1,3 @@
-// .fade-in-up {
-//   transition: all 0.6s ease-out;
-//   opacity: 0;
-//   transform: translateY(20px);
-// }
-
-// .fade-in-up.animate {
-//   opacity: 1;
-//   transform: translateY(0px);
-// }
-
-
-
 .coding {
   width: 100vw;
   height: 100vh;
@@ -174,9 +161,6 @@
         background-size: cover;
         transition: background-position 1.5s linear;
       }
-
-      // Redesign ======================================
-
     }
 
     .cloneImg {
@@ -222,20 +206,9 @@
             color: #d86f5d;
             text-shadow: 1px 1px 0 #fff;
             font-style: italic;
-            // animation: fadeInUp 0.8s ease-out both;
           }
         }
-
-
-
       }
-
-
-
-
-
-
-
 
       table {
         height: fit-content;
@@ -244,7 +217,6 @@
         overflow: hidden;
         border-collapse: collapse;
         backdrop-filter: blur(5px);
-
 
         th,
         td {
@@ -286,7 +258,6 @@
 
         .http-link {
           animation: rubberBand 2s linear infinite;
-          // animation: rubberBand 1s linear both;
           display: flex;
           gap: 10px;
           align-items: center;
@@ -309,7 +280,8 @@
     .box-content {
       width: 1058px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      gap: 50px;
 
       .rds-box {
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);

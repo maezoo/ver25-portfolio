@@ -248,10 +248,8 @@
   color: white;
   font-size: 18px;
 
-
   span {
     font-size: 16px;
-
   }
 }
 
@@ -265,8 +263,8 @@
   height: 50px;
   background-color: rgba(255, 255, 255, 0.2);
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 15px;
+  right: 15px;
   z-index: 999999999;
   transition: all 0.3s ease;
 
@@ -335,16 +333,15 @@
 
 .des2-Slide-next,
 .des3-Slide-next {
-  right: 15%;
+  right: 20%;
 }
 
 .des2-Slide-prev,
 .des3-Slide-prev {
-  left: 15%;
+  left: 20%;
 }
 
 // ****************** 팝업 ***************** //
-
 .thumb-popUp {
   display: none;
   position: absolute;
