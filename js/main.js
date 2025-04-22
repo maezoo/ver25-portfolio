@@ -33,9 +33,15 @@ const closeOverlay = () => {
   });
 
   setTimeout(() => {
+    Logo.classList.remove('logo-hidden');
+    Logo.classList.add('logo-visible');
+  }, 100)
+
+  setTimeout(() => {
     gnbLinks.forEach(link => {
       link.classList.remove('on');
     });
+
     hamburger.style.pointerEvents = 'auto';
   }, gnbList.length * 150 + 100);
 };
@@ -43,7 +49,9 @@ const closeOverlay = () => {
 // 햄버거 버튼 클릭 시 오버레이 열고 닫기
 hamburger.addEventListener('click', function () {
   hamburger.style.pointerEvents = 'none';
-
+  // Logo.style.display = 'none';
+  Logo.classList.remove('logo-visible');
+  Logo.classList.add('logo-hidden');
   const isActive = overlayNav.classList.contains('overlay-active');
 
   if (!isActive) {
@@ -66,7 +74,6 @@ hamburger.addEventListener('click', function () {
     });
 
     setTimeout(() => {
-
       gnbLinks.forEach(link => {
         link.classList.add('on');
       });
@@ -74,8 +81,11 @@ hamburger.addEventListener('click', function () {
     }, gnbList.length * 150 + 100);
 
   } else {
-    closeOverlay();
+    closeOverlay(
+
+    );
   }
+
 });
 
 // 함수: 탭메뉴 전환 ===========================
@@ -112,6 +122,16 @@ Logo.addEventListener('click', () => {
   sessionStorage.removeItem('activeTab');
   closeOverlay();
 });
+
+// Logo.addEventListener('click', function () {
+
+//   // 햄버거처럼 일정 시간 후 다시 클릭 가능
+//   setTimeout(() => {
+//     Logo.style.pointerEvents = 'auto';
+//   }, gnbList.length * 150 + 100); // 햄버거와 동일한 타이밍
+// });
+
+
 
 
 /************************************************************************************** */
