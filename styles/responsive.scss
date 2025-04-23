@@ -40,6 +40,10 @@
             padding: 0px 20px 5px 20px;
 
             .header-inner {
+                .logo {
+                    font-size: 12px;
+                }
+
                 .hamburger {
                     position: static;
 
@@ -52,12 +56,7 @@
                     }
                 }
             }
-
-
         }
-
-
-
     }
 
     @media (max-width: 1279px) {
