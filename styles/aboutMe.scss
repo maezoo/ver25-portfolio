@@ -59,6 +59,18 @@
     }
   }
 
+  .education {
+    .em-inner {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      row-gap: 0;
+
+      p br {
+        display: none;
+      }
+    }
+  }
+
   .exp-lic {
     display: flex;
     justify-content: space-between;
@@ -175,15 +187,17 @@
       }
     }
 
-    .personality-inner {
-      display: flex;
-      column-gap: 15px;
+    .personality {
+      .personality-inner {
+        display: flex;
+        column-gap: 15px;
 
-      span {
-        font-weight: bold;
-        font-size: 18px;
+        span {
+          font-weight: bold;
+          font-size: 18px;
+        }
+
       }
-
     }
   }
 }
