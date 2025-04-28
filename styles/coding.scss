@@ -1,397 +1,397 @@
 .coding {
-  width: 100vw;
-  height: 100vh;
+    width: 100vw;
+    height: 100vh;
 
-  .cc-title,
-  .rds-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 1.5rem;
-    }
-  }
-
-  .link-button {
-    a {
-      display: inline-block;
-      border-radius: 3.125rem;
-      padding: 6.5px 18.5px;
-      text-transform: uppercase;
-      transition: 0.2s linear;
-      color: #717171;
-      border: 2px solid #c2c2c2;
-      background: #fff;
-      font-weight: 500;
-
-      &:hover {
-        border: 1px solid #c2c2c2;
-        font-weight: bold;
-      }
-    }
-  }
-
-  .btn-result {
-    a {
-      border: 2px solid #E59B8E;
-      color: #d86f5d;
-
-      &:hover {
-        border: 1px solid #E59B8E;
-      }
-    }
-  }
-
-  .myProjectSwiper {
-    width: 100%;
-    height: 100%;
-
-    .swiper-slide {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 70px;
-    }
-
-    .mo-content {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-
-      .screen-wrapper {
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-
-        .res-phone {
-          width: 160px;
-          height: 320px;
-          border-radius: 2rem;
-          box-shadow: 9px 2px 10px 0px rgba(0, 0, 0, 0.8);
-          outline: 3px ridge #444444;
-          overflow: hidden;
-          position: absolute;
-          z-index: 2;
-          right: 0;
-          bottom: 0;
-          cursor: pointer;
-
-          &:hover {
-            background-position: 100% 100%;
-          }
-        }
-
-        .spc-phone {
-          background: url(/images/mobile_SPC.jpg) no-repeat;
-          background-size: cover;
-          transition: background-position 3s linear;
-        }
-
-        .cream-phone {
-          display: flex;
-          flex-direction: column;
-
-          .hd-img {
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-
-          .slide-img {
-            width: 100%;
-            height: 100%;
-            background: url(/images/phone-cream-slide.JPG) no-repeat;
-            background-size: cover;
-            transition: background-position 2s linear;
-
-            &:hover {
-              background-position: 100% 100%;
-            }
-          }
-        }
-
-        .no-phone {
-          display: none;
-        }
-      }
-    }
-
-    .preview {
-      width: 620px;
-      z-index: 1;
-      padding-bottom: 20px;
-
-      .cloneImg_1 {
-        background: url(/images/full-screen_SPC.JPG) no-repeat;
-        background-size: cover;
-        transition: background-position 2s linear;
-      }
-
-      .cloneImg_cream {
-        background: url(/images/full-screen_cream.jpg) no-repeat;
-        background-size: cover;
-        transition: background-position 2s linear;
-      }
-    }
-
-    .preview-2 {
-      .cloneImg_2 {
-        background: url(/images/full-screen_ckdhc.JPG) no-repeat;
-        background-size: cover;
-        transition: background-position 2s linear;
-      }
-
-      .cloneImg_3 {
-        background: url(/images/full-screen_ulsan-fire.JPG) no-repeat;
-        background-size: cover;
-        transition: background-position 0.8s linear;
-      }
-
-      .cloneImg_4 {
-        background: url(/images/full-screen_suseong.JPG) no-repeat;
-        background-size: cover;
-        transition: background-position 1.5s linear;
-      }
-    }
-
-    .cloneImg {
-      width: 468px;
-      height: 275px;
-      border-radius: 1.6rem;
-      box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
-      filter: grayscale(1) brightness(0.8);
-      cursor: pointer;
-
-      &:hover {
-        background-position: 100% 100%;
-        filter: none;
-      }
-    }
-
-    .info {
-      min-width: 418px;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      background: rgba(253, 253, 253, 0.4);
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-      border-radius: 18px;
-      padding: 10px;
-
-
-      .feature-wrapper {
+    .cc-title,
+    .rds-title {
         display: flex;
         flex-direction: column;
-        gap: 5px;
-
-        .feature {
-          font-size: 1.5rem;
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-
-          h3 {
-            margin: 5px 0px;
-            font-size: 3rem;
-            font-weight: 800;
-            color: #d86f5d;
-            text-shadow: 1px 1px 0 #fff;
-            font-style: italic;
-          }
-        }
-      }
-
-      table {
-        height: fit-content;
-        font-size: 1.5rem;
-        border-radius: 10px;
-        overflow: hidden;
-        border-collapse: collapse;
-        backdrop-filter: blur(5px);
-
-        th,
-        td {
-          background-color: rgba(245, 240, 230, 0.8);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          vertical-align: middle;
-        }
-
-        th {
-          font-size: 1.5rem;
-          text-align: left;
-          text-align: center;
-          font-weight: bold;
-          padding: 10px;
-        }
-
-        td {
-          padding: 10px 20px 10px 10px;
-        }
-
-        .skills-items {
-          display: flex;
-          justify-content: flex-start;
-          gap: 30px;
-        }
-
-        ul {
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          gap: 8px;
-        }
-      }
-
-      .link-list {
-        display: flex;
-        gap: 2px;
         align-items: center;
+        gap: 10px;
 
-        .http-link {
-          animation: rubberBand 2s linear infinite;
-          display: flex;
-          gap: 10px;
-          align-items: center;
-
-          a {
-            width: 40px;
-            height: 40px;
-            display: block;
-
-            img {
-              width: 100%;
-              height: 100%;
-              border-radius: 5px;
-            }
-          }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
         }
-      }
+
+        p {
+            font-size: 1.5rem;
+        }
     }
 
-    .box-content {
-      width: 1058px;
-      display: flex;
-      justify-content: center;
-      gap: 50px;
+    .link-button {
+        a {
+            display: inline-block;
+            border-radius: 3.125rem;
+            padding: 6.5px 18.5px;
+            text-transform: uppercase;
+            transition: 0.2s linear;
+            color: #717171;
+            border: 2px solid #c2c2c2;
+            background: #fff;
+            font-weight: 500;
 
-      .rds-box {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        position: relative;
-        width: 300px;
-        height: 300px;
-        border: 2px solid rgb(255, 255, 255);
-        border-radius: 30px;
-        overflow: hidden;
+            &:hover {
+                border: 1px solid #c2c2c2;
+                font-weight: bold;
+            }
+        }
+    }
 
-        .rdsImg {
-          width: 100%;
-          height: 100%;
+    .btn-result {
+        a {
+            border: 2px solid #E59B8E;
+            color: #d86f5d;
 
-          .de-feature {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0%;
-            background: rgba(253, 253, 253, 0.7);
+            &:hover {
+                border: 1px solid #E59B8E;
+            }
+        }
+    }
+
+    .myProjectSwiper {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            opacity: 0;
-            transform: translateY(-100%);
-            visibility: hidden;
-            transition: all 0.4s ease;
+            gap: 70px;
+        }
 
-            h3 {
-              font-size: 3rem;
-              font-weight: 800;
-              color: #d86f5d;
-              text-shadow: 1px 1px 0 #fff;
-              font-style: italic;
+        .mo-content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            .screen-wrapper {
+                position: relative;
+                display: flex;
+                align-items: flex-end;
+
+                .res-phone {
+                    width: 160px;
+                    height: 320px;
+                    border-radius: 2rem;
+                    box-shadow: 9px 2px 10px 0px rgba(0, 0, 0, 0.8);
+                    outline: 3px ridge #444444;
+                    overflow: hidden;
+                    position: absolute;
+                    z-index: 2;
+                    right: 0;
+                    bottom: 0;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-position: 100% 100%;
+                    }
+                }
+
+                .spc-phone {
+                    background: url(/images/mobile_SPC.jpg) no-repeat;
+                    background-size: cover;
+                    transition: background-position 3s linear;
+                }
+
+                .cream-phone {
+                    display: flex;
+                    flex-direction: column;
+
+                    .hd-img {
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .slide-img {
+                        width: 100%;
+                        height: 100%;
+                        background: url(/images/phone-cream-slide.JPG) no-repeat;
+                        background-size: cover;
+                        transition: background-position 2s linear;
+
+                        &:hover {
+                            background-position: 100% 100%;
+                        }
+                    }
+                }
+
+                .no-phone {
+                    display: none;
+                }
             }
-          }
-
-          &:hover .de-feature {
-            opacity: 1;
-            transform: translateY(0%);
-            visibility: visible;
-          }
         }
 
-        .rdsImg-1 {
-          background: url(/images/pra_e-class.JPG) no-repeat;
-          background-size: cover;
-          background-position: 90% 0%;
+        .preview {
+            width: 620px;
+            z-index: 1;
+            padding-bottom: 20px;
+
+            .cloneImg_1 {
+                background: url(/images/full-screen_SPC.JPG) no-repeat;
+                background-size: cover;
+                transition: background-position 2s linear;
+            }
+
+            .cloneImg_cream {
+                background: url(/images/full-screen_cream.jpg) no-repeat;
+                background-size: cover;
+                transition: background-position 2s linear;
+            }
         }
 
-        .rdsImg-2 {
-          background: url(/images/pra_beauty-store.JPG) no-repeat;
-          background-size: cover;
+        .preview-2 {
+            .cloneImg_2 {
+                background: url(/images/full-screen_ckdhc.JPG) no-repeat;
+                background-size: cover;
+                transition: background-position 2s linear;
+            }
+
+            .cloneImg_3 {
+                background: url(/images/full-screen_ulsan-fire.JPG) no-repeat;
+                background-size: cover;
+                transition: background-position 0.8s linear;
+            }
+
+            .cloneImg_4 {
+                background: url(/images/full-screen_suseong.JPG) no-repeat;
+                background-size: cover;
+                transition: background-position 1.5s linear;
+            }
         }
 
-        .rdsImg-3 {
-          background: url(/images/pra_shopping-app.png) no-repeat;
-          background-size: cover;
-          background-position: 50%;
+        .cloneImg {
+            width: 468px;
+            height: 275px;
+            border-radius: 1.6rem;
+            box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
+            filter: grayscale(1) brightness(0.8);
+            cursor: pointer;
+
+            &:hover {
+                background-position: 100% 100%;
+                filter: none;
+            }
         }
-      }
+
+        .info {
+            min-width: 418px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: rgba(253, 253, 253, 0.4);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 18px;
+            padding: 10px;
+
+
+            .feature-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                .feature {
+                    font-size: 1.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    h3 {
+                        margin: 5px 0px;
+                        font-size: 3rem;
+                        font-weight: 800;
+                        color: #d86f5d;
+                        text-shadow: 1px 1px 0 #fff;
+                        font-style: italic;
+                    }
+                }
+            }
+
+            table {
+                height: fit-content;
+                font-size: 1.5rem;
+                border-radius: 10px;
+                overflow: hidden;
+                border-collapse: collapse;
+                backdrop-filter: blur(5px);
+
+                th,
+                td {
+                    background-color: rgba(245, 240, 230, 0.8);
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    vertical-align: middle;
+                }
+
+                th {
+                    font-size: 1.5rem;
+                    text-align: left;
+                    text-align: center;
+                    font-weight: bold;
+                    padding: 10px;
+                }
+
+                td {
+                    padding: 10px 20px 10px 10px;
+                }
+
+                .skills-items {
+                    display: flex;
+                    justify-content: flex-start;
+                    gap: 30px;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                }
+            }
+
+            .link-list {
+                display: flex;
+                gap: 2px;
+                align-items: center;
+
+                .http-link {
+                    animation: rubberBand 2s linear infinite;
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        display: block;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .box-content {
+            width: 1058px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+
+            .rds-box {
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+                position: relative;
+                width: 300px;
+                height: 300px;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 30px;
+                overflow: hidden;
+
+                .rdsImg {
+                    width: 100%;
+                    height: 100%;
+
+                    .de-feature {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0%;
+                        background: rgba(253, 253, 253, 0.7);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        opacity: 0;
+                        transform: translateY(-100%);
+                        visibility: hidden;
+                        transition: all 0.4s ease;
+
+                        h3 {
+                            font-size: 3rem;
+                            font-weight: 800;
+                            color: #d86f5d;
+                            text-shadow: 1px 1px 0 #fff;
+                            font-style: italic;
+                        }
+                    }
+
+                    &:hover .de-feature {
+                        opacity: 1;
+                        transform: translateY(0%);
+                        visibility: visible;
+                    }
+                }
+
+                .rdsImg-1 {
+                    background: url(/images/pra_e-class.JPG) no-repeat;
+                    background-size: cover;
+                    background-position: 90% 0%;
+                }
+
+                .rdsImg-2 {
+                    background: url(/images/pra_beauty-store.JPG) no-repeat;
+                    background-size: cover;
+                }
+
+                .rdsImg-3 {
+                    background: url(/images/pra_shopping-app.png) no-repeat;
+                    background-size: cover;
+                    background-position: 50%;
+                }
+            }
+        }
+
+        .slide-btn-next,
+        .slide-btn-prev {
+            position: absolute;
+            top: 50%;
+            z-index: 10;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            outline: none;
+
+            &.hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .slide-btn-prev {
+            left: 3%;
+            border-style: solid;
+            border-width: 36px 33px 36px 0;
+            border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
+
+            &:hover,
+            &.hover {
+                border-color: transparent white transparent transparent;
+            }
+        }
+
+        .slide-btn-next {
+            border-style: solid;
+            border-width: 36px 0 36px 33px;
+            border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
+            right: 3%;
+
+            &:hover,
+            &.hover {
+                border-color: transparent transparent transparent white;
+            }
+        }
+
+        .swiper-pagination-horizontal {
+            background-color: rgba(255, 255, 255, 0.4);
+            height: 6px;
+
+            span {
+                background-color: white;
+            }
+        }
     }
-
-    .slide-btn-next,
-    .slide-btn-prev {
-      position: absolute;
-      top: 50%;
-      z-index: 10;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      outline: none;
-
-      &.hover {
-        transform: scale(1.1);
-      }
-    }
-
-    .slide-btn-prev {
-      left: 3%;
-      border-style: solid;
-      border-width: 36px 33px 36px 0;
-      border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
-
-      &:hover,
-      &.hover {
-        border-color: transparent white transparent transparent;
-      }
-    }
-
-    .slide-btn-next {
-      border-style: solid;
-      border-width: 36px 0 36px 33px;
-      border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
-      right: 3%;
-
-      &:hover,
-      &.hover {
-        border-color: transparent transparent transparent white;
-      }
-    }
-
-    .swiper-pagination-horizontal {
-      background-color: rgba(255, 255, 255, 0.4);
-      height: 6px;
-
-      span {
-        background-color: white;
-      }
-    }
-  }
 }
