@@ -47,8 +47,8 @@
 
     @media (max-width: 640px) {
         body {
-            // background: url(/images/mbg-1.jpg);
-            background: url(/images/mbg-2.jpg);
+            background: url(/images/mbg-1.jpg);
+            // background: url(/images/mbg-2.jpg);
             background-size: cover;
             height: 100vh;
 
@@ -117,7 +117,6 @@
         }
 
         .aboutMe {
-
             h1 {
                 font-size: 2.8rem;
             }
@@ -382,416 +381,171 @@
             }
         }
 
-        // .coding {
-        //     width: 100vw;
-        //     height: 100vh;
-        //     padding-top: 120px;
+        .hover_effect {
+            display: none;
+        }
 
-        //     .cc-title,
-        //     .rds-title {
-        //         display: flex;
-        //         flex-direction: column;
-        //         align-items: center;
-        //         gap: 10px;
+        .coding {
 
-        //         h1 {
-        //             font-weight: 600;
-        //             font-size: 2.8rem;
-        //         }
+            .cc-title,
+            .rds-title {
 
-        //         p {
-        //             text-align: center;
-        //             font-size: 1.4rem;
-        //         }
-        //     }
+                h1 {
+                    font-size: 2.8rem;
+                }
 
-        //     .link-button {
-        //         a {
-        //             display: inline-block;
-        //             border-radius: 3.125rem;
-        //             padding: 6.5px 18.5px;
-        //             text-transform: uppercase;
-        //             transition: 0.2s linear;
-        //             color: #717171;
-        //             border: 2px solid #c2c2c2;
-        //             background: #fff;
-        //             font-weight: 500;
+                p {
+                    text-align: center;
+                    font-size: 1.4rem;
+                }
 
-        //             &:hover {
-        //                 border: 1px solid #c2c2c2;
-        //                 font-weight: bold;
-        //             }
-        //         }
-        //     }
+                p br {
+                    display: block;
+                }
+            }
 
-        //     .btn-result {
-        //         a {
-        //             border: 2px solid #E59B8E;
-        //             color: #d86f5d;
+            .myProjectSwiper {
 
-        //             &:hover {
-        //                 border: 1px solid #E59B8E;
-        //             }
-        //         }
-        //     }
+                .swiper-slide {
+                    gap: 10px;
+                    padding: 0px 5%;
+                    padding-top: 50px;
+                    // justify-content: flex-start;
+                }
 
-        //     .myProjectSwiper {
-        //         // width: 100%;
-        //         // height: 100%;
+                .last-slide {
+                    padding-top: 60px;
+                    gap: 40px;
+                }
 
-        //         .swiper-slide {
-        //             display: flex;
-        //             flex-direction: column;
-        //             // align-items: center;
-        //             // justify-content: center;
-        //             gap: 40px;
-        //             padding: 0px 5%;
-        //         }
+                .mo-content {
+                    gap: 0px;
+                    flex-direction: column;
+                    align-items: center;
 
-        //         .mo-content {
-        //             display: flex;
-        //             flex-direction: column;
-        //             align-items: center;
-        //             gap: 10px;
+                    .screen-wrapper {
+                        width: 210px;
+                        height: 210px; // right: 0;
+                        // position: relative;
+                        // display: flex;
+                        // display: none;
+                        // flex-direction: column;
+                        // align-items: center;
+                        // justify-content: center;
 
-        //             .screen-wrapper {
-        //                 position: relative;
-        //                 display: flex;
-        //                 flex-direction: column;
-        //                 align-items: center;
+                        .res-phone {
+                            display: none;
+                        }
 
-        //                 .res-phone {
-        //                     display: none;
+                        .cream-phone {
+                            display: none;
+                        }
 
-        //                     width: 160px;
-        //                     height: 320px;
-        //                     border-radius: 2rem;
-        //                     box-shadow: 9px 2px 10px 0px rgba(0, 0, 0, 0.8);
-        //                     outline: 3px ridge #444444;
-        //                     overflow: hidden;
-        //                     // position: absolute;
-        //                     // position: static;
-        //                     z-index: 2;
-        //                     right: 0;
-        //                     bottom: 0;
-        //                     cursor: pointer;
+                    }
+                }
 
-        //                     &:hover {
-        //                         background-position: 100% 100%;
-        //                     }
-        //                 }
+                .preview {
+                    width: 100%;
+                    padding-bottom: 0px;
+                }
 
-        //                 .spc-phone {
-        //                     background: url(/images/mobile_SPC.jpg) no-repeat;
-        //                     background-size: cover;
-        //                     transition: background-position 3s linear;
-        //                 }
+                .cloneImg {
+                    position: absolute;
+                    top: 15px;
+                    width: 210px;
+                    height: 210px;
+                    border-radius: 50%;
+                    // border-radius: 1.6rem;
+                    border: 2px solid rgb(255, 255, 255);
+                    filter: none;
+                }
 
-        //                 .cream-phone {
-        //                     display: flex;
-        //                     flex-direction: column;
+                .info {
+                    min-width: 0px;
+                    width: 330px;
+                    border-radius: 1.6rem;
+                    padding: 25px 10px 10px;
 
-        //                     .hd-img {
-        //                         img {
-        //                             width: 100%;
-        //                             height: 100%;
-        //                         }
-        //                     }
+                    .feature-wrapper {
+                        .feature {
+                            font-size: 1.4rem;
+                            align-items: center;
+                        }
+                    }
 
-        //                     .slide-img {
-        //                         width: 100%;
-        //                         height: 100%;
-        //                         background: url(/images/phone-cream-slide.JPG) no-repeat;
-        //                         background-size: cover;
-        //                         transition: background-position 2s linear;
+                    table {
+                        font-size: 1.4rem;
 
-        //                         &:hover {
-        //                             background-position: 100% 100%;
-        //                         }
-        //                     }
-        //                 }
+                        th {
+                            font-size: 1.4rem;
+                            text-align: center;
+                            padding: 5px;
+                        }
 
-        //                 .no-phone {
-        //                     display: none;
-        //                 }
-        //             }
-        //         }
+                        td {
+                            padding: 10px;
+                        }
 
-        //         .preview {
-        //             // width: 620px;
-        //             // width: 310px;
-        //             z-index: 1;
+                        .skills-items {
+                            gap: 15px;
+                        }
+                    }
 
-        //             .cloneImg_1 {
-        //                 background: url(/images/full-screen_SPC.JPG) no-repeat;
-        //                 background-size: cover;
-        //                 transition: background-position 2s linear;
-        //             }
+                    .link-list {
+                        justify-content: center;
+                    }
+                }
 
-        //             .cloneImg_cream {
-        //                 background: url(/images/full-screen_cream.jpg) no-repeat;
-        //                 background-size: cover;
-        //                 transition: background-position 2s linear;
-        //             }
-        //         }
+                .box-content {
+                    width: 100%;
+                    gap: 20px;
+                    flex-direction: column;
 
-        //         .preview-2 {
-        //             .cloneImg_2 {
-        //                 background: url(/images/full-screen_ckdhc.JPG) no-repeat;
-        //                 background-size: cover;
-        //                 transition: background-position 2s linear;
-        //             }
+                    .rds-box {
+                        width: 300px;
+                        height: 150px;
+                        border-radius: 20px;
+                    }
+                }
 
-        //             .cloneImg_3 {
-        //                 background: url(/images/full-screen_ulsan-fire.JPG) no-repeat;
-        //                 background-size: cover;
-        //                 transition: background-position 0.8s linear;
-        //             }
+                .slide-btn-next,
+                .slide-btn-prev {
+                    position: absolute;
+                    top: 50%;
+                    z-index: 10;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    outline: none;
+                    display: none;
 
-        //             .cloneImg_4 {
-        //                 background: url(/images/full-screen_suseong.JPG) no-repeat;
-        //                 background-size: cover;
-        //                 transition: background-position 1.5s linear;
-        //             }
-        //         }
+                    &.hover {
+                        transform: scale(1.1);
+                    }
+                }
 
-        //         .cloneImg {
-        //             // width: 468px;
-        //             // height: 275px;
-        //             // border-radius: 1.6rem;
+                .slide-btn-prev {
+                    left: 3%;
+                    border-style: solid;
+                    border-width: 36px 33px 36px 0;
+                    border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
 
-        //             width: 340px;
-        //             height: 200px;
-        //             border-radius: 1.6rem;
-        //             box-shadow: -5px 10px 15px rgba(0, 0, 0, 0.25);
-        //             filter: grayscale(1) brightness(0.8);
-        //             cursor: pointer;
+                    &:hover,
+                    &.hover {
+                        border-color: transparent white transparent transparent;
+                    }
+                }
 
-        //             &:hover {
-        //                 background-position: 100% 100%;
-        //                 filter: none;
-        //             }
-        //         }
+                .slide-btn-next {
+                    border-style: solid;
+                    border-width: 36px 0 36px 33px;
+                    border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
+                    right: 3%;
 
-        //         .info {
-        //             // min-width: 418px;
-        //             width: 340px;
-        //             display: flex;
-        //             flex-direction: column;
-        //             gap: 5px;
-        //             background: rgba(253, 253, 253, 0.4);
-        //             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-        //             border-radius: 1.6rem;
-        //             padding: 10px;
-
-
-        //             .feature-wrapper {
-        //                 display: flex;
-        //                 flex-direction: column;
-        //                 gap: 5px;
-
-        //                 .feature {
-        //                     // font-size: 1.5rem;
-        //                     font-size: 1.4rem;
-        //                     display: flex;
-        //                     flex-direction: column;
-        //                     gap: 5px;
-        //                     align-items: center;
-
-        //                     h3 {
-        //                         margin: 5px 0px;
-        //                         font-size: 3rem;
-        //                         font-weight: 800;
-        //                         color: #d86f5d;
-        //                         text-shadow: 1px 1px 0 #fff;
-        //                         font-style: italic;
-        //                     }
-        //                 }
-        //             }
-
-        //             table {
-        //                 height: fit-content;
-        //                 font-size: 1.4rem;
-        //                 border-radius: 10px;
-        //                 overflow: hidden;
-        //                 border-collapse: collapse;
-        //                 backdrop-filter: blur(5px);
-
-        //                 th,
-        //                 td {
-        //                     background-color: rgba(245, 240, 230, 0.8);
-        //                     border: 1px solid rgba(255, 255, 255, 0.3);
-        //                     vertical-align: middle;
-        //                 }
-
-        //                 th {
-        //                     font-size: 1.4rem;
-        //                     text-align: center;
-        //                     font-weight: bold;
-        //                     padding: 10px;
-        //                 }
-
-        //                 td {
-        //                     padding: 10px 20px 10px 10px;
-        //                 }
-
-        //                 .skills-items {
-        //                     display: flex;
-        //                     justify-content: flex-start;
-        //                     gap: 20px;
-        //                 }
-
-        //                 ul {
-        //                     display: flex;
-        //                     flex-direction: column;
-        //                     flex-wrap: wrap;
-        //                     gap: 8px;
-        //                 }
-        //             }
-
-        //             .link-list {
-        //                 display: flex;
-        //                 gap: 2px;
-        //                 align-items: center;
-        //                 justify-content: center;
-
-        //                 .http-link {
-        //                     animation: rubberBand 2s linear infinite;
-        //                     display: flex;
-        //                     gap: 10px;
-        //                     align-items: center;
-
-        //                     a {
-        //                         width: 40px;
-        //                         height: 40px;
-        //                         display: block;
-
-        //                         img {
-        //                             width: 100%;
-        //                             height: 100%;
-        //                             border-radius: 5px;
-        //                         }
-        //                     }
-        //                 }
-        //             }
-        //         }
-
-        //         .box-content {
-        //             width: 1058px;
-        //             display: flex;
-        //             justify-content: center;
-        //             gap: 50px;
-
-        //             .rds-box {
-        //                 box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        //                 position: relative;
-        //                 width: 300px;
-        //                 height: 300px;
-        //                 border: 2px solid rgb(255, 255, 255);
-        //                 border-radius: 30px;
-        //                 overflow: hidden;
-
-        //                 .rdsImg {
-        //                     width: 100%;
-        //                     height: 100%;
-
-        //                     .de-feature {
-        //                         width: 100%;
-        //                         height: 100%;
-        //                         position: absolute;
-        //                         top: 0%;
-        //                         background: rgba(253, 253, 253, 0.7);
-        //                         display: flex;
-        //                         flex-direction: column;
-        //                         align-items: center;
-        //                         justify-content: center;
-        //                         gap: 10px;
-        //                         opacity: 0;
-        //                         transform: translateY(-100%);
-        //                         visibility: hidden;
-        //                         transition: all 0.4s ease;
-
-        //                         h3 {
-        //                             font-size: 3rem;
-        //                             font-weight: 800;
-        //                             color: #d86f5d;
-        //                             text-shadow: 1px 1px 0 #fff;
-        //                             font-style: italic;
-        //                         }
-        //                     }
-
-        //                     &:hover .de-feature {
-        //                         opacity: 1;
-        //                         transform: translateY(0%);
-        //                         visibility: visible;
-        //                     }
-        //                 }
-
-        //                 .rdsImg-1 {
-        //                     background: url(/images/pra_e-class.JPG) no-repeat;
-        //                     background-size: cover;
-        //                     background-position: 90% 0%;
-        //                 }
-
-        //                 .rdsImg-2 {
-        //                     background: url(/images/pra_beauty-store.JPG) no-repeat;
-        //                     background-size: cover;
-        //                 }
-
-        //                 .rdsImg-3 {
-        //                     background: url(/images/pra_shopping-app.png) no-repeat;
-        //                     background-size: cover;
-        //                     background-position: 50%;
-        //                 }
-        //             }
-        //         }
-
-        //         .slide-btn-next,
-        //         .slide-btn-prev {
-        //             position: absolute;
-        //             top: 50%;
-        //             z-index: 10;
-        //             cursor: pointer;
-        //             transition: all 0.3s ease;
-        //             outline: none;
-
-        //             &.hover {
-        //                 transform: scale(1.1);
-        //             }
-        //         }
-
-        //         .slide-btn-prev {
-        //             left: 3%;
-        //             border-style: solid;
-        //             border-width: 36px 33px 36px 0;
-        //             border-color: transparent rgba(255, 255, 255, 0.4) transparent transparent;
-
-        //             &:hover,
-        //             &.hover {
-        //                 border-color: transparent white transparent transparent;
-        //             }
-        //         }
-
-        //         .slide-btn-next {
-        //             border-style: solid;
-        //             border-width: 36px 0 36px 33px;
-        //             border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
-        //             right: 3%;
-
-        //             &:hover,
-        //             &.hover {
-        //                 border-color: transparent transparent transparent white;
-        //             }
-        //         }
-
-        //         .swiper-pagination-horizontal {
-        //             background-color: rgba(255, 255, 255, 0.4);
-        //             height: 6px;
-
-        //             span {
-        //                 background-color: white;
-        //             }
-        //         }
-        //     }
-        // }
+                    &:hover,
+                    &.hover {
+                        border-color: transparent transparent transparent white;
+                    }
+                }
+            }
+        }
     }

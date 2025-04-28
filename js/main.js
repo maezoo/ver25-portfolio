@@ -160,6 +160,17 @@ var myProjectSwiper = new Swiper(".myProjectSwiper", {
     prevEl: ".slide-btn-prev",
   },
 
+  // breakpoints: {
+
+  //   0: {
+  //     slidesPerView: 1,
+  //     direction: 'vertical',
+  //   },
+  //   1020: {
+  //     slidesPerView: 1,
+  //     direction: 'horizontal',
+  //   },
+  // },
   on: {
     slideChange(swiper) {
       const currentIndex = swiper.realIndex;
@@ -177,9 +188,7 @@ var myProjectSwiper = new Swiper(".myProjectSwiper", {
           arrowPrev.classList.remove("hover");
         }, 1000);
       }
-
       previousIndex = currentIndex;
-
     },
   }
 });
