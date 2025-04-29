@@ -118,13 +118,13 @@
 
         .aboutMe {
             h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
 
             .aboutMe-content {
-                padding-top: 120px;
-
+                padding-top: 90px;
                 justify-content: flex-start;
+                gap: 40px;
 
                 .resume {
                     gap: 30px;
@@ -239,19 +239,18 @@
         .design {
             .design-content {
                 gap: 50px;
-                padding-top: 120px;
+                padding-top: 90px;
                 justify-content: flex-start;
 
                 .tab-title {
                     gap: 5px;
 
                     h1 {
-                        font-size: 2.8rem;
-                        margin-bottom: 5px;
+                        font-size: 2.5rem;
                     }
 
                     p {
-                        font-size: 1.4rem;
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -389,14 +388,15 @@
 
             .cc-title,
             .rds-title {
+                gap: 5px;
 
                 h1 {
-                    font-size: 2.8rem;
+                    font-size: 2.5rem;
                 }
 
                 p {
                     text-align: center;
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                 }
 
                 p br {
@@ -405,17 +405,17 @@
             }
 
             .myProjectSwiper {
+                background-color: #d86f5d;
 
                 .swiper-slide {
-                    gap: 10px;
+                    gap: 0px;
                     padding: 0px 5%;
-                    padding-top: 50px;
-                    // justify-content: flex-start;
+                    padding-top: 90px;
+                    justify-content: flex-start;
                 }
 
                 .last-slide {
-                    padding-top: 60px;
-                    gap: 40px;
+                    gap: 30px;
                 }
 
                 .mo-content {
@@ -468,16 +468,21 @@
 
                     .feature-wrapper {
                         .feature {
-                            font-size: 1.4rem;
+                            font-size: 1.2rem;
                             align-items: center;
+
+                            h3 {
+                                font-size: 2.8rem;
+                            }
                         }
+
                     }
 
                     table {
-                        font-size: 1.4rem;
+                        font-size: 1.2rem;
 
                         th {
-                            font-size: 1.4rem;
+                            font-size: 1.2rem;
                             text-align: center;
                             padding: 5px;
                         }
